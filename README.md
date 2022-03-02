@@ -1,4 +1,4 @@
-# FOOL'S GOLD_v1.0
+# FOOL'S GOLD version 1.0 (FG_v1.0)
 
 ## Game created and built in 8 days
 
