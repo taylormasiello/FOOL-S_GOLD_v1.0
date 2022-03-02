@@ -1,0 +1,1 @@
+# FOOL-S_GOLD_v1.0
