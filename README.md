@@ -21,4 +21,4 @@ FOOL'S GOLD Devlog: https://taayakinsfirstgamejam.blogspot.com/
  
 Game Jam info: https://itch.io/jam/brackeys-7
 
-FOOL'S GOLD_v0.0 (corrupted) Original Repo: https://github.com/taylormasiello/FOOLS_GOLD_v0.0
+FOOL'S GOLD_v0.0 (CORRUPTED) Original Repo: https://github.com/taylormasiello/FOOLS_GOLD_v0.0
