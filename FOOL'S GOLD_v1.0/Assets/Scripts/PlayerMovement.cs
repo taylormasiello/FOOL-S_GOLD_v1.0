@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] Rigidbody2D playerRb;
-    [SerializeField] Animator animator;
+    [SerializeField] Animator playerAnimator;
 
     public Vector3 playerWorldPos;
 
@@ -30,8 +30,8 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("Vertical", movement.y);
-        animator.SetFloat("Speed", movement.sqrMagnitude);
+        playerAnimator.SetFloat("Horizontal", movement.x);
+        playerAnimator.SetFloat("Vertical", movement.y);
+        playerAnimator.SetFloat("Speed", movement.sqrMagnitude); 
     }
 }
