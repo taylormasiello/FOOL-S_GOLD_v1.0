@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    //[SerializeField] Texture2D menuCursor;
+    [SerializeField] Texture2D menuCursor;
     //[SerializeField] Texture2D searchingCursor;
 
     public void PlayGame()
@@ -17,10 +17,10 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-    }     
+    }
 
-    //void Start()
-    //{
-    //    Cursor.SetCursor(menuCursor, Vector2.zero, CursorMode.Auto);
-    //}
+    void Start()
+    {
+        Cursor.SetCursor(menuCursor, Vector2.zero, CursorMode.Auto);
+    }
 }

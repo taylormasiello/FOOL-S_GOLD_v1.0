@@ -7,8 +7,8 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
 
-    //[SerializeField] Texture2D pauseCursor;
-    //[SerializeField] Texture2D searchingCursor;
+    [SerializeField] Texture2D pauseCursor;
+    [SerializeField] Texture2D searchingCursor;
     [SerializeField] GameObject pauseMenuUI;
 
     //void Awake()
@@ -42,7 +42,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         GameIsPaused = false;
         Time.timeScale = 1f;
-        //Cursor.SetCursor(searchingCursor, Vector2.zero, CursorMode.Auto);
+        Cursor.SetCursor(searchingCursor, Vector2.zero, CursorMode.Auto);
 
     }
 
@@ -50,7 +50,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(true);
         GameIsPaused = true;
-        //Cursor.SetCursor(pauseCursor, Vector2.zero, CursorMode.Auto);
+        Cursor.SetCursor(pauseCursor, Vector2.zero, CursorMode.Auto);
         Time.timeScale = 0f;
         
     }
