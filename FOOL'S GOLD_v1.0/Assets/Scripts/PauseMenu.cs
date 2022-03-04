@@ -5,14 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] GameObject pauseMenu;
-    [SerializeField] Texture2D menuCursor;
-
     public static bool GameIsPaused = false;
+
+    //[SerializeField] Texture2D pauseCursor;
+    //[SerializeField] Texture2D searchingCursor;
+    [SerializeField] GameObject pauseMenuUI;
+
+    //void Awake()
+    //{
+    //    GameIsPaused = false;
+    //    pauseMenuUI.SetActive(false);
+    //}
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
+        EscKey();
+    }
+
+    public void EscKey()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameIsPaused)
             {
@@ -27,26 +39,26 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        pauseMenu.SetActive(false);
+        pauseMenuUI.SetActive(false);
+        GameIsPaused = false;
+        Time.timeScale = 1f;
+        //Cursor.SetCursor(searchingCursor, Vector2.zero, CursorMode.Auto);
+
+    }
+
+    public void Pause()
+    {
+        pauseMenuUI.SetActive(true);
+        GameIsPaused = true;
+        //Cursor.SetCursor(pauseCursor, Vector2.zero, CursorMode.Auto);
+        Time.timeScale = 0f;
+        
+    }
+
+    public void LoadMenu()
+    {
         Time.timeScale = 1f;
         GameIsPaused = false;
-    }
-
-    void Pause()
-    {
-        pauseMenu.SetActive(true);
-        Time.timeScale = 0f;
-        GameIsPaused = true;
-    }
-
-    public void MainMenu()
-    {
-        Time.timeScale = 1f;
         SceneManager.LoadScene(0);
-    }
-
-    void Start()
-    {
-        Cursor.SetCursor(menuCursor, Vector2.zero, CursorMode.Auto);
     }
 }

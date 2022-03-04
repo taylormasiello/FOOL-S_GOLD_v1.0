@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class EndMenu : MonoBehaviour
 {
-    [SerializeField] GameObject endMenu;
-    [SerializeField] Texture2D menuCursor;
+    //[SerializeField] GameObject endMenu;
+    //[SerializeField] Texture2D menuCursor;
 
-    public static bool gameOver = false;
+    //public static bool gameOver = false;
 
     // when game timer reaches zero
     //public void GameOver()
@@ -18,23 +18,23 @@ public class EndMenu : MonoBehaviour
     //    Cursor.SetCursor(menuCursor, Vector2.zero, CursorMode.Auto);
     //}
 
-    public void MainMenu()
+    public void TitleMenu()
     {
         SceneManager.LoadScene(0);
     }
 
-    void Start()
-    {
-        endMenu.SetActive(false);
-        gameOver = false;
-    }
+    //void Start()
+    //{
+    //    endMenu.SetActive(false);
+    //    gameOver = false;
+    //}
 
     // PH LOGIC; remove after GameOver() active and linked to GameTimer()
-    void Update()
-    {
-        if (endMenu.activeSelf == true)
-        {
-            Cursor.SetCursor(menuCursor, Vector2.zero, CursorMode.Auto);
-        }
-    }
+    //void Update()
+    //{
+    //    if (endMenu.activeSelf == true)
+    //    {
+    //        Cursor.SetCursor(menuCursor, Vector2.zero, CursorMode.Auto);
+    //    }
+    //}
 }
