@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] Texture2D menuCursor;
+
     public static bool GameIsPaused = false;
 
     void Update()
@@ -37,9 +39,14 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
     }
 
-    public void LoadMenu()
+    public void MainMenu()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
+    }
+
+    void Start()
+    {
+        Cursor.SetCursor(menuCursor, Vector2.zero, CursorMode.Auto);
     }
 }
