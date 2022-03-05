@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(1);
     }
 
@@ -19,6 +20,7 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 0;
         Cursor.SetCursor(menuCursor, Vector2.zero, CursorMode.Auto);
     }
 }

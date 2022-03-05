@@ -14,6 +14,7 @@ public class EndMenu : MonoBehaviour
     public void TitleMenu()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
     }
 
     void Update()
