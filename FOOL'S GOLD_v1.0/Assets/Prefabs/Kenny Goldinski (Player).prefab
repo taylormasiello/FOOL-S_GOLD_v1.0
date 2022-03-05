@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1295896634}
   - component: {fileID: 1295896636}
   - component: {fileID: 1295896635}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Running_Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4819,7 +4819,7 @@ GameObject:
   - component: {fileID: 7948659920367117910}
   - component: {fileID: 3530283319919016823}
   - component: {fileID: 308118037912268440}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Kenny Goldinski (Player)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4960,7 +4960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fced459e522cbd54da5fe1938983f7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 8
+  moveSpeed: 10
   playerRb: {fileID: 7948659920367117910}
   playerAnimator: {fileID: 308118037977808362}
   runSys: {fileID: 1295896636}
