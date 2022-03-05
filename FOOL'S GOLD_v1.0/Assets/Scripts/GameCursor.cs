@@ -27,6 +27,7 @@ public class GameCursor : MonoBehaviour
         Cursor.SetCursor(searchingCursorTexture, Vector2.zero, CursorMode.Auto);
         torch.Play();
         pickaxe.Stop();
+        pickaxe.Clear();
     }
 
     public void SetMiningCursor(Texture2D texture, ParticleSystem partSys)
@@ -35,6 +36,7 @@ public class GameCursor : MonoBehaviour
         Cursor.SetCursor(miningCursorTexture, Vector2.zero, CursorMode.Auto);
         pickaxe.Play();
         torch.Stop();
+        torch.Clear();
     }
 
     public void TogglePickaxe()
