@@ -8,8 +8,8 @@ public class FollowCursor : MonoBehaviour
 
     void Update()
     {
-        float cursorPosX = (Input.mousePosition.x + 50);
-        float cursorPosY = (Input.mousePosition.y + 10);
+        float cursorPosX = (Input.mousePosition.x + 75);
+        float cursorPosY = (Input.mousePosition.y - 25);
         float cursorPosZ = (Input.mousePosition.z);
 
         Vector3 cursorOffset = new Vector3(cursorPosX, cursorPosY, cursorPosZ);
