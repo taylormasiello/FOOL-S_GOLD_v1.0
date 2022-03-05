@@ -12,9 +12,9 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 movement;
 
-    void Start()
+    void Awake()
     {
-        runSys.Play();    
+        runSys.Play();
     }
 
     void Update()

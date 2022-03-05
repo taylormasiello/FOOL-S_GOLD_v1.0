@@ -45,7 +45,7 @@ public class ToMine : MonoBehaviour
         Vector3Int playerTileCell = tilemapGrid.WorldToCell(playerPosNoZ); //player pos, cell
         TileBase tileUnderPlayer = rockTilemap.GetTile(playerTileCell); //tile under player
 
-        if (PlayerInOffset(mousePosNoZ, playerPosNoZ, maxOffset) && ComparedTilesInOffset(mouseTileCell, playerTileCell, maxOffset) && gameCursorScript.isPickaxe == true)
+        if (PlayerInOffset(mousePosNoZ, playerPosNoZ, maxOffset) && ComparedTilesInOffset(mouseTileCell, playerTileCell, maxOffset) && gameCursorScript.isPickaxe == true && playerRb.IsTouchingLayers(LayerMask.GetMask("Rocks")))
         {
             if (Input.GetMouseButtonDown(0))
             {
