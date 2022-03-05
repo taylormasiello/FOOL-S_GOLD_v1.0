@@ -8,10 +8,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] Rigidbody2D playerRb;
     [SerializeField] Animator playerAnimator;
-
-    public Vector3 playerWorldPos;
+    [SerializeField] ParticleSystem runSys;
 
     Vector2 movement;
+
+    void Start()
+    {
+        runSys.Play();    
+    }
 
     void Update()
     {
@@ -32,6 +36,6 @@ public class PlayerMovement : MonoBehaviour
 
         playerAnimator.SetFloat("Horizontal", movement.x);
         playerAnimator.SetFloat("Vertical", movement.y);
-        playerAnimator.SetFloat("Speed", movement.sqrMagnitude); 
+        playerAnimator.SetFloat("Speed", movement.sqrMagnitude);
     }
 }
