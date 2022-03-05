@@ -54,4 +54,9 @@ public class ToMine : MonoBehaviour
             }
         }
     }
+
+    //void Mining()
+    //{
+
+    //}
 }
