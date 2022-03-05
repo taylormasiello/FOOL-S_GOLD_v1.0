@@ -8,9 +8,15 @@ public class FollowCursor : MonoBehaviour
 
     void Update()
     {
-        Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
+        float cursorPosX = (Input.mousePosition.x + 50);
+        float cursorPosY = (Input.mousePosition.y + 10);
+        float cursorPosZ = (Input.mousePosition.z);
+
+        Vector3 cursorOffset = new Vector3(cursorPosX, cursorPosY, cursorPosZ);
+
+        Ray r = Camera.main.ScreenPointToRay(cursorOffset);
         Vector3 pos = r.GetPoint(distance);
-        transform.position = pos;
+        transform.position = pos;        
     }
 
 }
