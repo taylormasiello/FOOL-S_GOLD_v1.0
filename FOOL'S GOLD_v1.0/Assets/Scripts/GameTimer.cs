@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class GameTimer : MonoBehaviour
 {
-    //[SerializeField] EndMenu endMenu;
+    [SerializeField] GameObject endMenu;
     //[SerializeField] GameObject hud;
     //[SerializeField] GameManager gameManager;
-    
+
 
     [SerializeField] float timeStart = 5f;
 
@@ -35,6 +35,7 @@ public class GameTimer : MonoBehaviour
     {
         timeLeft = timeStart;
         gameOver = false;
+        endMenu.SetActive(false);
     }
 
 
@@ -49,6 +50,7 @@ public class GameTimer : MonoBehaviour
         {
             Time.timeScale = 0;
             gameOver = true;
+            endMenu.SetActive(true);
         }
     }
 }

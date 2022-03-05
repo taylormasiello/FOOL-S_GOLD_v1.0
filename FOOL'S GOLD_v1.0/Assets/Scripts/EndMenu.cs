@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class EndMenu : MonoBehaviour
 {
-    //[SerializeField] GameObject endMenu;
-    //[SerializeField] Texture2D menuCursor;
+    [SerializeField] GameObject endMenu;
+    [SerializeField] Texture2D endMenuCursor;
 
     //public static bool gameOver = false;
 
@@ -23,11 +23,13 @@ public class EndMenu : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    //void Start()
-    //{
-    //    endMenu.SetActive(false);
-    //    gameOver = false;
-    //}
+    void Update()
+    {
+        if (endMenu.activeInHierarchy == true)
+        {
+            Cursor.SetCursor(endMenuCursor, Vector2.zero, CursorMode.Auto);
+        }
+    }
 
     // PH LOGIC; remove after GameOver() active and linked to GameTimer()
     //void Update()

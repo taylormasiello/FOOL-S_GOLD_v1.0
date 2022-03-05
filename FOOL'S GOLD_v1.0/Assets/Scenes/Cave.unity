@@ -380,7 +380,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf3278fff9f60e7428398982bc407412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeStart: 10
+  endMenu: {fileID: 680651413}
+  timeStart: 5
   timeLeft: 0
   gameOver: 0
 --- !u!1 &463453143
@@ -922,6 +923,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e783ef8455b3e814d9b68f4458cc4a81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endMenu: {fileID: 680651413}
+  endMenuCursor: {fileID: 2800000, guid: 23a123305ebba704f8bc4f0247b37ec1, type: 3}
 --- !u!1 &729056823
 GameObject:
   m_ObjectHideFlags: 0
