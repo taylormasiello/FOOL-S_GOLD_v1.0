@@ -365,7 +365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endMenu: {fileID: 680651413}
-  timeStart: 500
+  timeStart: 5
   timeLeft: 0
   gameOver: 0
 --- !u!1 &463453143
@@ -910,6 +910,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endMenu: {fileID: 680651413}
   endMenuCursor: {fileID: 2800000, guid: 23a123305ebba704f8bc4f0247b37ec1, type: 3}
+  pickaxe: {fileID: 1277494497}
+  torch: {fileID: 2104499962}
+  endMenuSys: {fileID: 0}
 --- !u!1 &729056823
 GameObject:
   m_ObjectHideFlags: 0
@@ -65495,6 +65498,7 @@ MonoBehaviour:
   miningCursorTexture: {fileID: 2800000, guid: 120a5b4ae8d41214cb01e1ae42c49052, type: 3}
   pickaxe: {fileID: 1277494497}
   torch: {fileID: 2104499962}
+  endMenu: {fileID: 0}
   isPickaxe: 0
 --- !u!1 &1014521078
 GameObject:
@@ -85457,7 +85461,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1

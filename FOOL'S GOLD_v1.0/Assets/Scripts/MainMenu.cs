@@ -6,12 +6,10 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] Texture2D menuCursor;
-    //[SerializeField] Texture2D searchingCursor;
 
     public void PlayGame()
     {
         SceneManager.LoadScene(1);
-        //Cursor.SetCursor(searchingCursor, Vector2.zero, CursorMode.Auto);
     }
 
     public void QuitGame()

@@ -6,10 +6,6 @@ using UnityEngine.UI;
 public class GameTimer : MonoBehaviour
 {
     [SerializeField] GameObject endMenu;
-    //[SerializeField] GameObject hud;
-    //[SerializeField] GameManager gameManager;
-
-
     [SerializeField] float timeStart = 5f;
 
     public float timeLeft;
