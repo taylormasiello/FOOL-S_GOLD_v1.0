@@ -17,11 +17,11 @@ public class ToMine : MonoBehaviour
     [SerializeField] GameObject miningInfoBox;
     [SerializeField] Vector3 maxOffset = new Vector3(5f, 5f, 5f);
 
-    public bool isMining;
+    public bool isMining; 
 
     void Start()
     {
-        isMining = false;
+        isMining = false; // **I think I can delete this
     }
 
     void Update()

@@ -427,9 +427,7 @@ MonoBehaviour:
   m_AnimatedTarget: {fileID: 2102979679}
   m_LayerIndex: 0
   m_ShowDebugText: 0
-  m_ChildCameras:
-  - {fileID: 184471736}
-  - {fileID: 2017871524}
+  m_ChildCameras: []
   m_Instructions:
   - m_FullHash: -397766897
     m_VirtualCamera: {fileID: 2017871524}
@@ -94250,6 +94248,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826120340}
   m_CullTransparentMesh: 1
+--- !u!1 &1876285147 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 308118037977808361, guid: a876c345902131840b66ec710ac2f500, type: 3}
+  m_PrefabInstance: {fileID: 308118037912268437}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1876285148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876285147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7babacb4b6e3642458126020a963cbb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  miningInfoBox: {fileID: 1782252007}
+  realGoldBox: {fileID: 1387011749}
+  foolsGoldBox: {fileID: 60262693}
+  isLootDrop: 0
 --- !u!1 &1881199852
 GameObject:
   m_ObjectHideFlags: 0
