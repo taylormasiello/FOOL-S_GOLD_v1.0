@@ -14,6 +14,7 @@ public class ToMine : MonoBehaviour
     [SerializeField] Tilemap rockTilemap;
     [SerializeField] Rigidbody2D playerRb;
     [SerializeField] GameCursor gameCursorScript;
+    [SerializeField] GameObject miningInfoBox;
     [SerializeField] Vector3 maxOffset = new Vector3(2f, 2f, 2f);
 
     void Update()
@@ -49,14 +50,8 @@ public class ToMine : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                //placeholder; write "MiningAction" script to combine/attach to this "ToMine" script
-                Debug.Log("Kenny Can Mine!");
+                miningInfoBox.SetActive(true);
             }
         }
     }
-
-    //void Mining()
-    //{
-
-    //}
 }

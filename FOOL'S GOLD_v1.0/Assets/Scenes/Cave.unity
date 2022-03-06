@@ -66564,7 +66564,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 14.142212, y: -1.3756981}
   m_SizeDelta: {x: 72.0117, y: 19.2603}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -86861,7 +86861,7 @@ GameObject:
   - component: {fileID: 1277494495}
   - component: {fileID: 1277494497}
   - component: {fileID: 1277494496}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Pickaxe System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86920,8 +86920,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 502290721
-  m_SortingLayer: 6
+  m_SortingLayerID: 681713601
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -93736,7 +93736,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1686522141}
   - component: {fileID: 1686522142}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Cursor Effects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94073,7 +94073,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1782252008
 RectTransform:
   m_ObjectHideFlags: 0
@@ -94749,7 +94749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRb: {fileID: 308118037912268439}
   canvas: {fileID: 1907013828}
-  infobox: {fileID: 2045819605}
+  infoBox: {fileID: 2045819605}
 --- !u!1 &2062115087
 GameObject:
   m_ObjectHideFlags: 0
@@ -94783,7 +94783,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -94991,7 +94991,7 @@ GameObject:
   - component: {fileID: 2104499960}
   - component: {fileID: 2104499962}
   - component: {fileID: 2104499961}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Torch System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95050,8 +95050,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 502290721
-  m_SortingLayer: 6
+  m_SortingLayerID: 681713601
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -99914,6 +99914,10 @@ PrefabInstance:
       propertyPath: tilemapGrid
       value: 
       objectReference: {fileID: 1714630540}
+    - target: {fileID: 308118037912268440, guid: a876c345902131840b66ec710ac2f500, type: 3}
+      propertyPath: miningInfoBox
+      value: 
+      objectReference: {fileID: 1782252007}
     - target: {fileID: 308118037912268440, guid: a876c345902131840b66ec710ac2f500, type: 3}
       propertyPath: gameCursorScript
       value: 
