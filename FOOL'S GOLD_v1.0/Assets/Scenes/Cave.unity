@@ -305,7 +305,7 @@ RectTransform:
   - {fileID: 2063663326}
   - {fileID: 1634312736}
   m_Father: {fileID: 2045819605}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -91820,7 +91820,7 @@ RectTransform:
   - {fileID: 1753823463}
   - {fileID: 335221865}
   m_Father: {fileID: 2045819605}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -94090,7 +94090,7 @@ RectTransform:
   - {fileID: 1564732421}
   - {fileID: 399217951}
   m_Father: {fileID: 2045819605}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -94457,6 +94457,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bb392f5be701b8429885283a249ff92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  miningInfoBox: {fileID: 1782252007}
+  realGoldBox: {fileID: 1387011749}
+  foolsGoldBox: {fileID: 60262693}
   scoreText: {fileID: 760063659}
 --- !u!1 &1943906401
 GameObject:
@@ -94738,9 +94741,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1782252008}
   - {fileID: 1387011750}
   - {fileID: 60262694}
-  - {fileID: 1782252008}
   m_Father: {fileID: 668791227}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

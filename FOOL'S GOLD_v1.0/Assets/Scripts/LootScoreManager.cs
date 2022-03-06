@@ -8,6 +8,10 @@ public class LootScoreManager : MonoBehaviour
 {
     public static LootScoreManager instance;
 
+    [SerializeField] GameObject miningInfoBox;
+    [SerializeField] GameObject realGoldBox;
+    [SerializeField] GameObject foolsGoldBox;
+
     [SerializeField] TextMeshProUGUI scoreText;
     // [SerializeField] TextMeshProUGUI highScoreText;
 
@@ -22,6 +26,7 @@ public class LootScoreManager : MonoBehaviour
 
     void Start()
     {
+        InvokeRepeating("timeBoxShown", 1f, 1f);
         miningCounter = 0;
         scoreText.text = score.ToString();
         // highScoreText.text = highScore.ToString();
@@ -33,17 +38,49 @@ public class LootScoreManager : MonoBehaviour
         Debug.Log(miningCounter);
 
         int dropRate = Random.Range(1, 10); 
+        //float timeBoxShown = 5f;
 
-        if (dropRate % 3 == 0)
+        if(miningInfoBox.activeInHierarchy)
         {
-            score += 100;
-            Debug.Log(score);
+            if (dropRate % 3 == 0)
+            {
+                score += 100;
+                Debug.Log(score);
 
-            scoreText.text = score.ToString();
+                scoreText.text = score.ToString();
+
+                realGoldBox.SetActive(true);
+                foolsGoldBox.SetActive(false);
+                //timeBoxShown -= Time.time;
+
+                //if(timeBoxShown <= 0.01)
+                //{
+                //    realGoldBox.SetActive(false);
+                //}
+            }
+            else
+            {
+                foolsGoldBox.SetActive(true);
+                realGoldBox.SetActive(false);
+                //timeBoxShown -= Time.time;
+                //if (timeBoxShown <= 0.01)
+                //{
+                //    foolsGoldBox.SetActive(false);
+                //}
+            }
         }
-        else
+    }
+
+    void timeBoxShown()
+    {
+        float timeBoxShown = 5f;
+
+        timeBoxShown -= Time.time;
+
+        if (timeBoxShown <= 0.01 && (realGoldBox.activeInHierarchy || foolsGoldBox.activeInHierarchy))
         {
-            return;
+            realGoldBox.SetActive(false);
+            foolsGoldBox.SetActive(false);
         }
     }
 }

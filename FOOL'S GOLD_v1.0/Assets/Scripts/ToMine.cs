@@ -18,15 +18,15 @@ public class ToMine : MonoBehaviour
     [SerializeField] GameObject miningInfoBox;
     [SerializeField] Slider miningProgress;
 
-    [SerializeField] GameObject realGoldBox;
-    [SerializeField] GameObject foolsGoldBox;
+    //[SerializeField] GameObject realGoldBox;
+    //[SerializeField] GameObject foolsGoldBox;
 
     [SerializeField] Vector3 maxOffset = new Vector3(2f, 2f, 2f);
 
     public bool canMove;
     // public int miningCounter;
 
-    public bool finishedMining;
+    //public bool finishedMining;
 
     void Start()
     {
@@ -50,7 +50,7 @@ public class ToMine : MonoBehaviour
             miningInfoBox.SetActive(false);
 
 
-            finishedMining = true;
+            //finishedMining = true;
             //Debug.Log(finishedMining);
         }
     }
@@ -136,7 +136,7 @@ public class ToMine : MonoBehaviour
     //void LootDrop()
     //{
     //    float timeDropShown = 4f;
-    //    int dropRate = Random.Range(1, 9);
+    //    //int dropRate = Random.Range(1, 9);
 
     //    if (finishedMining)
     //    {
@@ -144,17 +144,17 @@ public class ToMine : MonoBehaviour
 
     //        if (timeDropShown > 0.02f)
     //        {
-    //            if (dropRate % 3 == 0)
-    //            {
-    //                //realGoldBox.SetActive(true);
-    //                // Debug.Log("realGold");
-    //                //increment score
-    //            }
-    //            else
-    //            {
-    //                //foolsGoldBox.SetActive(true);
-    //                // Debug.Log("foolsGold");
-    //            }
+    //            //if (dropRate % 3 == 0)
+    //            //{
+    //            //    //realGoldBox.SetActive(true);
+    //            //    // Debug.Log("realGold");
+    //            //    //increment score
+    //            //}
+    //            //else
+    //            //{
+    //            //    //foolsGoldBox.SetActive(true);
+    //            //    // Debug.Log("foolsGold");
+    //            //}
     //        }
     //        else if (timeDropShown <= 0.01f)
     //        {
@@ -163,7 +163,7 @@ public class ToMine : MonoBehaviour
 
     //            return;
     //        }
-    //    }        
+    //    }
     //}
 
     //void playerFreeze()
