@@ -16,7 +16,7 @@ public class Mining : MonoBehaviour
 
     void Start()
     {
-        bool isLootDrop = false;
+        //bool isLootDrop = false;
     }
 
     void Update()

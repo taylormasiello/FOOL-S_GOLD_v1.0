@@ -9,7 +9,7 @@ public class SliderTimer : MonoBehaviour
     //[SerializeField] GameObject miningInfoBox;
     //[SerializeField] GameObject realGoldBox;
 
-    float progress;
+    //float progress;
     
     //float mineTime;
 
@@ -19,18 +19,18 @@ public class SliderTimer : MonoBehaviour
     void Start()
     {
         InvokeRepeating("ProgressChange", 1.0f, 1.0f);
-        progress = miningProgress.value;
+        miningProgress.value = 0;
     }
 
     void ProgressChange()
     {
-        if (progress < miningProgress.maxValue)
+        if (miningProgress.value < miningProgress.maxValue)
         {
-            progress += 1;
+            miningProgress.value += 1;
         }
-        else if (progress >= miningProgress.maxValue)
+        else if (miningProgress.value >= miningProgress.maxValue)
         {
-            miningProgress.value = 3;
+            miningProgress.value = 0;
         }
 
     }
