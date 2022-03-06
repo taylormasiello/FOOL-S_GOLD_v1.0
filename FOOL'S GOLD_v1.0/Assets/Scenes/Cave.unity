@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 60262694}
   m_Layer: 5
   m_Name: FoolsGold
-  m_TagString: Untagged
+  m_TagString: FoolsGoldInfoBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1029,7 +1029,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 879516963}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 0.8
+  m_MaxValue: 3
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -91799,7 +91799,7 @@ GameObject:
   - component: {fileID: 1387011750}
   m_Layer: 5
   m_Name: RealGold
-  m_TagString: Untagged
+  m_TagString: RealGoldInfoBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94069,7 +94069,7 @@ GameObject:
   - component: {fileID: 1782252008}
   m_Layer: 5
   m_Name: Mining
-  m_TagString: Untagged
+  m_TagString: MiningInfoBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94706,7 +94706,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2045819605}
   - component: {fileID: 2045819606}
-  - component: {fileID: 2045819607}
   m_Layer: 5
   m_Name: InfoBox
   m_TagString: Untagged
@@ -94751,19 +94750,6 @@ MonoBehaviour:
   playerRb: {fileID: 308118037912268439}
   canvas: {fileID: 1907013828}
   infoBox: {fileID: 2045819605}
---- !u!114 &2045819607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045819604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fae4a283da3287a408942ba183130a6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  miningProgress: {fileID: 399217952}
 --- !u!1 &2062115087
 GameObject:
   m_ObjectHideFlags: 0
@@ -99937,6 +99923,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1782252007}
     - target: {fileID: 308118037912268440, guid: a876c345902131840b66ec710ac2f500, type: 3}
+      propertyPath: miningProgress
+      value: 
+      objectReference: {fileID: 399217952}
+    - target: {fileID: 308118037912268440, guid: a876c345902131840b66ec710ac2f500, type: 3}
       propertyPath: gameCursorScript
       value: 
       objectReference: {fileID: 996869460}
@@ -99988,7 +99978,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kenny Goldinski (Player)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1876285148, guid: a876c345902131840b66ec710ac2f500, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a876c345902131840b66ec710ac2f500, type: 3}
 --- !u!4 &308118037912268438 stripped
 Transform:

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.Events;
-using UnityEngine.UIElements;
+//using UnityEngine.UIElements;
 using UnityEngine.Tilemaps;
 
 public class ToMine : MonoBehaviour
@@ -16,6 +16,7 @@ public class ToMine : MonoBehaviour
 
     [SerializeField] GameCursor gameCursorScript;
     [SerializeField] GameObject miningInfoBox;
+    [SerializeField] Slider miningProgress;
 
     [SerializeField] Vector3 maxOffset = new Vector3(2f, 2f, 2f);
 
@@ -23,7 +24,9 @@ public class ToMine : MonoBehaviour
 
     void Start()
     {
-        isMining = false; // **I think I can delete this
+        InvokeRepeating("ProgressChange", 0.1f, 0.1f);
+        miningProgress.value = 0;
+        isMining = false;
     }
 
     void Update()
@@ -60,8 +63,65 @@ public class ToMine : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 miningInfoBox.SetActive(true);
-                isMining = true;
+                Mining();
+
+                //Instantiate(miningInfoBox);
+                //isMining = true;
+
             }
         }
+    }
+
+    void Mining()
+    {
+        isMining = true;
+
+        //Vector3 boxPos = (miningInfoBox.transform.position);
+        miningProgress.minValue = 0f;
+        miningProgress.maxValue = 5f;
+        miningProgress.value = 0f;
+
+        //miningInfoBox.SetActive(true);
+
+        //bool active = miningInfoBox.activeInHierarchy;
+        //Debug.Log(active);
+
+        //if(active)
+        //{
+        //    if (miningProgress.value < miningProgress.maxValue)
+        //    {
+        //        miningProgress.value += Time.time;
+        //    }
+        //    //else if (miningProgress.value >= miningProgress.maxValue)
+        //    //{
+        //    //    miningInfoBox.SetActive(false);
+        //    //}
+        //}
+
+        
+
+
+        //if (miningInfoBox.activeInHierarchy)
+        //{
+        //    miningProgress.value += Time.time;
+        //}
+
+        //if (miningProgress.value >= miningProgress.maxValue)
+        //{
+        //    miningInfoBox.SetActive(false);
+        //}
+    }
+
+    void ProgressChange()
+    {
+        if (miningProgress.value < miningProgress.maxValue)
+        {
+            miningProgress.value += 0.1f;
+        }
+        else if (miningProgress.value >= miningProgress.maxValue)
+        {
+            miningInfoBox.SetActive(false);
+        }
+
     }
 }
