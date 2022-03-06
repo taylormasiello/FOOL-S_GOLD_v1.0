@@ -28,7 +28,7 @@ public class LootScoreManager : MonoBehaviour
 
     void Start()
     {
-        //InvokeRepeating("timeBoxShown", 2f, 2f);
+        InvokeRepeating("timeBoxShown", 0.5f, 0.5f);
         miningCounter = 0;
         scoreText.text = score.ToString();
         // highScoreText.text = highScore.ToString();
@@ -42,52 +42,62 @@ public class LootScoreManager : MonoBehaviour
         int dropRate = Random.Range(1, 10); 
         //float timeBoxShown = 5f;
 
-            if (dropRate % 3 == 0)
-            {
-                score += 100;
-                Debug.Log(score);
+        if (dropRate % 3 == 0)
+        {
+            score += 100;
+            Debug.Log(score);
 
-                scoreText.text = score.ToString();
+            scoreText.text = score.ToString();
 
-                realGoldBox.SetActive(true);
-                foolsGoldBox.SetActive(false);
-                //timeBoxShown -= Time.time;
+            timeShown = 2f;
+            realGoldBox.SetActive(true);
+            foolsGoldBox.SetActive(false);
+            //timeBoxShown -= Time.time;
 
-                //if(timeBoxShown <= 0.01)
-                //{
-                //    realGoldBox.SetActive(false);
-                //}
-            }
-            else
-            {
-                foolsGoldBox.SetActive(true);
-                realGoldBox.SetActive(false);
-                //timeBoxShown -= Time.time;
-                //if (timeBoxShown <= 0.01)
-                //{
-                //    foolsGoldBox.SetActive(false);
-                //}
-            }
+            //if(timeBoxShown <= 0.01)
+            //{
+            //    realGoldBox.SetActive(false);
+            //}
+        }
+        else
+        {
+            timeShown = 2f;
+            foolsGoldBox.SetActive(true);
+            realGoldBox.SetActive(false);
+            //timeBoxShown -= Time.time;
+            //if (timeBoxShown <= 0.01)
+            //{
+            //    foolsGoldBox.SetActive(false);
+            //}
+        }
         
     }
 
-    //void timeBoxShown()
-    //{
-    //    timeShown = 2f;
+    void timeBoxShown()
+    {
 
-    //    timeShown -= Time.time;
 
-    //    if (timeShown <= 0.02)
-    //    {
-    //        if(realGoldBox.activeInHierarchy)
-    //        {
-    //            realGoldBox.SetActive(false);
-    //        }
-    //        else if (foolsGoldBox.activeInHierarchy)
-    //        {
-    //            foolsGoldBox.SetActive(false);
-    //        }          
-            
-    //    }
-    //}
+        
+        {
+            if (realGoldBox.activeInHierarchy && !foolsGoldBox.activeInHierarchy)
+            {
+                timeShown -= 0.5f;
+                
+                if (timeShown <= 0.01f)
+                {
+                    realGoldBox.SetActive(false);
+                }
+            }
+            else if (foolsGoldBox.activeInHierarchy && !realGoldBox.activeInHierarchy)
+            {
+                timeShown -= 0.5f;
+
+                if (timeShown <= 0.01f)
+                {
+                    foolsGoldBox.SetActive(false);
+                }
+            }
+
+        }
+    }
 }
