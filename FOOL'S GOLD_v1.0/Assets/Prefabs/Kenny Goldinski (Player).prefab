@@ -4819,7 +4819,6 @@ GameObject:
   - component: {fileID: 7948659920367117910}
   - component: {fileID: 3530283319919016823}
   - component: {fileID: 308118037912268440}
-  - component: {fileID: 1876285148}
   m_Layer: 7
   m_Name: Kenny Goldinski (Player)
   m_TagString: Untagged
@@ -4982,18 +4981,8 @@ MonoBehaviour:
   playerRb: {fileID: 7948659920367117910}
   gameCursorScript: {fileID: 0}
   miningInfoBox: {fileID: 0}
+  miningProgress: {fileID: 0}
+  realGoldBox: {fileID: 0}
+  foolsGoldBox: {fileID: 0}
   maxOffset: {x: 1.5, y: 1.5, z: 1.5}
-  isMining: 0
---- !u!114 &1876285148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 308118037977808361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f989434c9572c5940913ddfc94504fea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  miningInfoBox: {fileID: 0}
+  canMove: 0

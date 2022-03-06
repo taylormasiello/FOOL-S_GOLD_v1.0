@@ -69,30 +69,30 @@ public class Mining : MonoBehaviour
         }
     }
 
-    //void LootDrop(bool loot)
-    //{
-    //    float timeDropShown = 3.0f;
-    //    int dropRate = Random.Range(1, 9);
+    void LootDrop()
+    {
+        float timeDropShown = 3.0f;
+        int dropRate = Random.Range(1, 9);
 
-    //    if(isLootDrop)
-    //    {
-    //        timeDropShown -= Time.time;
-    //        if (dropRate % 3 == 0)
-    //        {
-    //            realGoldBox.SetActive(true);
-    //            //increment score
-    //        }
-    //        else
-    //        {
-    //            foolsGoldBox.SetActive(true);
-    //        }
-    //    }
+        if (isLootDrop)
+        {
+            timeDropShown -= Time.time;
+            if (dropRate % 3 == 0)
+            {
+                realGoldBox.SetActive(true);
+                //increment score
+            }
+            else
+            {
+                foolsGoldBox.SetActive(true);
+            }
+        }
 
-    //    if(timeDropShown <= 0)
-    //    {
-    //        isLootDrop = false;
-    //        realGoldBox.SetActive(false);
-    //        foolsGoldBox.SetActive(false);
-    //    }
-    //}
+        if (timeDropShown <= 0)
+        {
+            isLootDrop = false;
+            realGoldBox.SetActive(false);
+            foolsGoldBox.SetActive(false);
+        }
+    }
 }
