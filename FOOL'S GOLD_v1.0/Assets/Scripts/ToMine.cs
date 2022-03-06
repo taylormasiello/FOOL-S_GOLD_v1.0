@@ -18,25 +18,15 @@ public class ToMine : MonoBehaviour
     [SerializeField] GameObject miningInfoBox;
     [SerializeField] Slider miningProgress;
 
-    //[SerializeField] GameObject realGoldBox;
-    //[SerializeField] GameObject foolsGoldBox;
-
     [SerializeField] Vector3 maxOffset = new Vector3(2f, 2f, 2f);
 
     public bool canMove;
-    // public int miningCounter;
-
-    //public bool finishedMining;
 
     void Start()
     {
         InvokeRepeating("ProgressChange", 0.1f, 0.1f);
-        //InvokeRepeating("LootDrop", 1f, 1f);
-
         miningProgress.value = 0;
-        //miningCounter = 0;
         canMove = true;
-        //isMining = false;
     }
 
     void ProgressChange()
@@ -48,10 +38,6 @@ public class ToMine : MonoBehaviour
         else if (miningProgress.value >= miningProgress.maxValue)
         {
             miningInfoBox.SetActive(false);
-
-
-            //finishedMining = true;
-            //Debug.Log(finishedMining);
         }
     }
 
@@ -63,7 +49,6 @@ public class ToMine : MonoBehaviour
     void Update()
     {
         ClickOnRock();
-        // LootDrop();
     }
 
     bool PlayerInOffset(Vector3 pos1, Vector3 pos2, Vector3 offset) // compares cursor pos world & player pos world to offset
@@ -93,33 +78,18 @@ public class ToMine : MonoBehaviour
         if (PlayerInOffset(mousePosNoZ, playerPosNoZ, maxOffset) && ComparedTilesInOffset(mouseTileCell, playerTileCell, maxOffset) && (gameCursorScript.isPickaxe == true) && (tileUnderCursor != tileUnderPlayer))
         {
             if (Input.GetMouseButtonDown(0))
-            {
-
-                
+            {                
                 Mining();
-                // LootScoreManager.instance.LootDrop();
-                //miningCounter++;
-                //Debug.Log(miningCounter);
-                //LootDrop();
-
-                //Instantiate(miningInfoBox);
-                //isMining = true;
-
                 //delete cell of rock
                 canMove = true;
-/*                LootDrop(); *///show either real or fool's gold card + logic
-
             }
         }
     }
 
     void Mining()
     {
-        //isMining = true;
         miningInfoBox.SetActive(true);
-        //finishedMining = false;
         canMove = false;
-        //Debug.Log(finishedMining); 
 
         miningProgress.minValue = 0f;
         miningProgress.maxValue = Random.Range(0.5f, 2.5f);
@@ -130,41 +100,6 @@ public class ToMine : MonoBehaviour
             LootScoreManager.instance.LootDrop();
         }
     }
-
-
-
-    //void LootDrop()
-    //{
-    //    float timeDropShown = 4f;
-    //    //int dropRate = Random.Range(1, 9);
-
-    //    if (finishedMining)
-    //    {
-    //        timeDropShown -= Time.time;
-
-    //        if (timeDropShown > 0.02f)
-    //        {
-    //            //if (dropRate % 3 == 0)
-    //            //{
-    //            //    //realGoldBox.SetActive(true);
-    //            //    // Debug.Log("realGold");
-    //            //    //increment score
-    //            //}
-    //            //else
-    //            //{
-    //            //    //foolsGoldBox.SetActive(true);
-    //            //    // Debug.Log("foolsGold");
-    //            //}
-    //        }
-    //        else if (timeDropShown <= 0.01f)
-    //        {
-    //            //realGoldBox.SetActive(false);
-    //            //foolsGoldBox.SetActive(false);
-
-    //            return;
-    //        }
-    //    }
-    //}
 
     //void playerFreeze()
     //{

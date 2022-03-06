@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class TestyTest : MonoBehaviour
 {
-    [SerializeField] GameObject miningInfoBox;
-    [SerializeField] Slider miningProgress;
+    //[SerializeField] GameObject miningInfoBox;
+    //[SerializeField] Slider miningProgress;
 
     //void Start()
     //{

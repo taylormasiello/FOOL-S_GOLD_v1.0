@@ -37,67 +37,47 @@ public class LootScoreManager : MonoBehaviour
     public void LootDrop()
     {
         miningCounter++;
-        Debug.Log(miningCounter);
 
-        int dropRate = Random.Range(1, 10); 
-        //float timeBoxShown = 5f;
+        int dropRate = Random.Range(1, 4); 
 
-        if (dropRate % 3 == 0)
+        if (dropRate % 2 == 0)
         {
-            score += 100;
-            Debug.Log(score);
-
-            scoreText.text = score.ToString();
-
-            timeShown = 2f;
+            timeShown = 1.75f;
             realGoldBox.SetActive(true);
             foolsGoldBox.SetActive(false);
-            //timeBoxShown -= Time.time;
 
-            //if(timeBoxShown <= 0.01)
-            //{
-            //    realGoldBox.SetActive(false);
-            //}
+            score += 100;
+            scoreText.text = score.ToString();
         }
         else
         {
-            timeShown = 2f;
+            timeShown = 1.75f;
             foolsGoldBox.SetActive(true);
             realGoldBox.SetActive(false);
-            //timeBoxShown -= Time.time;
-            //if (timeBoxShown <= 0.01)
-            //{
-            //    foolsGoldBox.SetActive(false);
-            //}
         }
         
     }
 
     void timeBoxShown()
-    {
-
-
-        
+    {  
+        if (realGoldBox.activeInHierarchy && !foolsGoldBox.activeInHierarchy)
         {
-            if (realGoldBox.activeInHierarchy && !foolsGoldBox.activeInHierarchy)
-            {
-                timeShown -= 0.5f;
+            timeShown -= 0.5f;
                 
-                if (timeShown <= 0.01f)
-                {
-                    realGoldBox.SetActive(false);
-                }
-            }
-            else if (foolsGoldBox.activeInHierarchy && !realGoldBox.activeInHierarchy)
+            if (timeShown <= 0.01f)
             {
-                timeShown -= 0.5f;
-
-                if (timeShown <= 0.01f)
-                {
-                    foolsGoldBox.SetActive(false);
-                }
+                realGoldBox.SetActive(false);
             }
-
         }
+        else if (foolsGoldBox.activeInHierarchy && !realGoldBox.activeInHierarchy)
+        {
+            timeShown -= 0.5f;
+
+            if (timeShown <= 0.01f)
+            {
+                foolsGoldBox.SetActive(false);
+            }
+        }
+        
     }
 }
