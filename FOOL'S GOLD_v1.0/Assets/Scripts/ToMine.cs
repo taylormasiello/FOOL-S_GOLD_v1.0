@@ -24,7 +24,7 @@ public class ToMine : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("ProgressChange", 0.1f, 0.1f);
+        InvokeRepeating("ProgressChange", 0.05f, 0.05f);
         miningProgress.value = 0;
         isMining = false;
     }
@@ -78,45 +78,17 @@ public class ToMine : MonoBehaviour
 
         //Vector3 boxPos = (miningInfoBox.transform.position);
         miningProgress.minValue = 0f;
-        miningProgress.maxValue = 5f;
+        miningProgress.maxValue = Random.Range(0.5f, 2.5f);
         miningProgress.value = 0f;
 
-        //miningInfoBox.SetActive(true);
 
-        //bool active = miningInfoBox.activeInHierarchy;
-        //Debug.Log(active);
-
-        //if(active)
-        //{
-        //    if (miningProgress.value < miningProgress.maxValue)
-        //    {
-        //        miningProgress.value += Time.time;
-        //    }
-        //    //else if (miningProgress.value >= miningProgress.maxValue)
-        //    //{
-        //    //    miningInfoBox.SetActive(false);
-        //    //}
-        //}
-
-        
-
-
-        //if (miningInfoBox.activeInHierarchy)
-        //{
-        //    miningProgress.value += Time.time;
-        //}
-
-        //if (miningProgress.value >= miningProgress.maxValue)
-        //{
-        //    miningInfoBox.SetActive(false);
-        //}
     }
 
     void ProgressChange()
     {
         if (miningProgress.value < miningProgress.maxValue)
         {
-            miningProgress.value += 0.1f;
+            miningProgress.value += 0.2f;
         }
         else if (miningProgress.value >= miningProgress.maxValue)
         {
