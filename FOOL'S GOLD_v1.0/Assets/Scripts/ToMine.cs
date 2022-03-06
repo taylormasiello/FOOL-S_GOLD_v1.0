@@ -24,7 +24,7 @@ public class ToMine : MonoBehaviour
     [SerializeField] Vector3 maxOffset = new Vector3(2f, 2f, 2f);
 
     public bool canMove;
-    public int miningCounter;
+    // public int miningCounter;
 
     public bool finishedMining;
 
@@ -34,7 +34,7 @@ public class ToMine : MonoBehaviour
         //InvokeRepeating("LootDrop", 1f, 1f);
 
         miningProgress.value = 0;
-        miningCounter = 0;
+        //miningCounter = 0;
         canMove = true;
         //isMining = false;
     }
@@ -63,7 +63,7 @@ public class ToMine : MonoBehaviour
     void Update()
     {
         ClickOnRock();
-        LootDrop();
+        // LootDrop();
     }
 
     bool PlayerInOffset(Vector3 pos1, Vector3 pos2, Vector3 offset) // compares cursor pos world & player pos world to offset
@@ -95,10 +95,11 @@ public class ToMine : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
 
-
+                
                 Mining();
-                miningCounter++;
-                Debug.Log(miningCounter);
+                // LootScoreManager.instance.LootDrop();
+                //miningCounter++;
+                //Debug.Log(miningCounter);
                 //LootDrop();
 
                 //Instantiate(miningInfoBox);
@@ -123,42 +124,47 @@ public class ToMine : MonoBehaviour
         miningProgress.minValue = 0f;
         miningProgress.maxValue = Random.Range(0.5f, 2.5f);
         miningProgress.value = 0f;
-    }
 
-
-
-    void LootDrop()
-    {
-        float timeDropShown = 4f;
-        int dropRate = Random.Range(1, 9);
-
-        if (finishedMining)
+        if(miningProgress.value <= 0.01f)
         {
-            timeDropShown -= Time.time;
-
-            if (timeDropShown > 0.02f)
-            {
-                if (dropRate % 3 == 0)
-                {
-                    //realGoldBox.SetActive(true);
-                    // Debug.Log("realGold");
-                    //increment score
-                }
-                else
-                {
-                    //foolsGoldBox.SetActive(true);
-                    // Debug.Log("foolsGold");
-                }
-            }
-            else if (timeDropShown <= 0.01f)
-            {
-                //realGoldBox.SetActive(false);
-                //foolsGoldBox.SetActive(false);
-
-                return;
-            }
-        }        
+            LootScoreManager.instance.LootDrop();
+        }
     }
+
+
+
+    //void LootDrop()
+    //{
+    //    float timeDropShown = 4f;
+    //    int dropRate = Random.Range(1, 9);
+
+    //    if (finishedMining)
+    //    {
+    //        timeDropShown -= Time.time;
+
+    //        if (timeDropShown > 0.02f)
+    //        {
+    //            if (dropRate % 3 == 0)
+    //            {
+    //                //realGoldBox.SetActive(true);
+    //                // Debug.Log("realGold");
+    //                //increment score
+    //            }
+    //            else
+    //            {
+    //                //foolsGoldBox.SetActive(true);
+    //                // Debug.Log("foolsGold");
+    //            }
+    //        }
+    //        else if (timeDropShown <= 0.01f)
+    //        {
+    //            //realGoldBox.SetActive(false);
+    //            //foolsGoldBox.SetActive(false);
+
+    //            return;
+    //        }
+    //    }        
+    //}
 
     //void playerFreeze()
     //{
