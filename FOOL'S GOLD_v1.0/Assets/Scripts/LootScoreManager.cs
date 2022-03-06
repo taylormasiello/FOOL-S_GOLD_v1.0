@@ -11,6 +11,7 @@ public class LootScoreManager : MonoBehaviour
     [SerializeField] GameObject miningInfoBox;
     [SerializeField] GameObject realGoldBox;
     [SerializeField] GameObject foolsGoldBox;
+    [SerializeField] Slider miningSlider;
 
     [SerializeField] TextMeshProUGUI scoreText;
     // [SerializeField] TextMeshProUGUI highScoreText;
@@ -18,6 +19,7 @@ public class LootScoreManager : MonoBehaviour
     int score = 0;
     int miningCounter;
     // int highScore = 0;
+    float timeShown;
 
     void Awake()
     {
@@ -26,7 +28,7 @@ public class LootScoreManager : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("timeBoxShown", 1f, 1f);
+        //InvokeRepeating("timeBoxShown", 2f, 2f);
         miningCounter = 0;
         scoreText.text = score.ToString();
         // highScoreText.text = highScore.ToString();
@@ -40,8 +42,6 @@ public class LootScoreManager : MonoBehaviour
         int dropRate = Random.Range(1, 10); 
         //float timeBoxShown = 5f;
 
-        if(miningInfoBox.activeInHierarchy)
-        {
             if (dropRate % 3 == 0)
             {
                 score += 100;
@@ -68,19 +68,26 @@ public class LootScoreManager : MonoBehaviour
                 //    foolsGoldBox.SetActive(false);
                 //}
             }
-        }
+        
     }
 
-    void timeBoxShown()
-    {
-        float timeBoxShown = 5f;
+    //void timeBoxShown()
+    //{
+    //    timeShown = 2f;
 
-        timeBoxShown -= Time.time;
+    //    timeShown -= Time.time;
 
-        if (timeBoxShown <= 0.01 && (realGoldBox.activeInHierarchy || foolsGoldBox.activeInHierarchy))
-        {
-            realGoldBox.SetActive(false);
-            foolsGoldBox.SetActive(false);
-        }
-    }
+    //    if (timeShown <= 0.02)
+    //    {
+    //        if(realGoldBox.activeInHierarchy)
+    //        {
+    //            realGoldBox.SetActive(false);
+    //        }
+    //        else if (foolsGoldBox.activeInHierarchy)
+    //        {
+    //            foolsGoldBox.SetActive(false);
+    //        }          
+            
+    //    }
+    //}
 }
