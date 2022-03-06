@@ -13,13 +13,12 @@ public class Mining : MonoBehaviour
 
     float timerTime;
     bool isNowMining;
+    public bool isLootDrop;
 
-    //rand int for realVSfake drop logic between 1-9
-
-    //DELETE CELL on end; player input freeze/unfreeze on start/end of miningAction
-    
     void Start()
     {
+        bool isLootDrop = false;
+
         miningTimer.minValue = 0;
         miningTimer.maxValue = Random.Range(0.5f, 3.0f); ;
         miningTimer.value = timerTime;
@@ -27,31 +26,61 @@ public class Mining : MonoBehaviour
 
     void Update()
     {
+        MiningAction();
+    }
+
+    void MiningAction()
+    {
         isNowMining = GameObject.Find("Kenny Goldinski (Player)").GetComponent<ToMine>().isMining;
+
+
         float time = timerTime - Time.time;
 
         if (isNowMining)
         {
             miningTimer.value = time;
-            
-            if(miningTimer.maxValue <= miningTimer.minValue)
+            //DELETE CELL on end; player input freeze/unfreeze on start/end of miningAction
+
+            if (miningTimer.maxValue <= miningTimer.minValue)
             {
                 isNowMining = false;
                 miningInfoBox.SetActive(false);
+                //DELETE CELL on end; player input freeze/unfreeze on start/end of miningAction
 
-                //if( randInt 1-9 % 3 = 0)
-                //{
-                //    realGoldBox.SetActive(true);
-                        //increment score
-                        //setActive False after 3 sec delay
-                //}
-                //else
-                //{
-                //    foolsGoldBox.SetActive(true);
-                        //setActive False after 3 sec delay
-                //}
+                bool isLootDrop = true;
+                LootDrop(isLootDrop);
 
             }
         }
+    }
+
+    void LootDrop(bool loot)
+    {
+        float timeDropShown = 3.0f;
+        int dropRate = Random.Range(1, 9);
+
+        if(isLootDrop)
+        {
+            timeDropShown -= Time.time;
+            if (dropRate % 3 == 0)
+            {
+                realGoldBox.SetActive(true);
+                //increment score
+            }
+            else
+            {
+                foolsGoldBox.SetActive(true);
+            }
+        }
+
+        if(timeDropShown <= 0)
+        {
+            isLootDrop = false;
+            realGoldBox.SetActive(false);
+            foolsGoldBox.SetActive(false);
+            //DELETE CELL on end; player input freeze/unfreeze on start/end of miningAction
+        }
+
+
     }
 }
