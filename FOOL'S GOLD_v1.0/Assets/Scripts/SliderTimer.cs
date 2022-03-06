@@ -17,7 +17,7 @@ public class SliderTimer : MonoBehaviour
     {
         if (miningProgress.value < miningProgress.maxValue)
         {
-            miningProgress.value += 0.11f;
+            miningProgress.value += 0.07f;
         }
         else if (miningProgress.value >= miningProgress.maxValue)
         {
