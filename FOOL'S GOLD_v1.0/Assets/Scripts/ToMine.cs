@@ -75,6 +75,7 @@ public class ToMine : MonoBehaviour
     void Mining()
     {
         isMining = true;
+        //player input freeze
 
         //Vector3 boxPos = (miningInfoBox.transform.position);
         miningProgress.minValue = 0f;
@@ -93,6 +94,10 @@ public class ToMine : MonoBehaviour
         else if (miningProgress.value >= miningProgress.maxValue)
         {
             miningInfoBox.SetActive(false);
+            //delete cell of rock
+            //player input unfreeze
+            //show either real or fool's gold card + logic
+            
         }
 
     }
