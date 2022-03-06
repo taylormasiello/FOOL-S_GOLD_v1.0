@@ -26,3 +26,33 @@ public class SliderTimer : MonoBehaviour
 
     }
 }
+
+//miningInfoBox.SetActive(true);
+
+//bool active = miningInfoBox.activeInHierarchy;
+//Debug.Log(active);
+
+//if(active)
+//{
+//    if (miningProgress.value < miningProgress.maxValue)
+//    {
+//        miningProgress.value += Time.time;
+//    }
+//    //else if (miningProgress.value >= miningProgress.maxValue)
+//    //{
+//    //    miningInfoBox.SetActive(false);
+//    //}
+//}
+
+
+
+
+//if (miningInfoBox.activeInHierarchy)
+//{
+//    miningProgress.value += Time.time;
+//}
+
+//if (miningProgress.value >= miningProgress.maxValue)
+//{
+//    miningInfoBox.SetActive(false);
+//}
