@@ -13,9 +13,11 @@ public class ToMine : MonoBehaviour
     [SerializeField] Grid tilemapGrid;
     [SerializeField] Tilemap rockTilemap;
     [SerializeField] Rigidbody2D playerRb;
+
     [SerializeField] GameCursor gameCursorScript;
     [SerializeField] GameObject miningInfoBox;
-    [SerializeField] Vector3 maxOffset = new Vector3(5f, 5f, 5f);
+
+    [SerializeField] Vector3 maxOffset = new Vector3(2f, 2f, 2f);
 
     public bool isMining; 
 
@@ -53,7 +55,7 @@ public class ToMine : MonoBehaviour
         Vector3Int playerTileCell = tilemapGrid.WorldToCell(playerPosNoZ); //player pos, cell
         TileBase tileUnderPlayer = rockTilemap.GetTile(playerTileCell); //tile under player
 
-        if (PlayerInOffset(mousePosNoZ, playerPosNoZ, maxOffset) && ComparedTilesInOffset(mouseTileCell, playerTileCell, maxOffset) && gameCursorScript.isPickaxe == true && playerRb.IsTouchingLayers(LayerMask.GetMask("Rocks")))
+        if (PlayerInOffset(mousePosNoZ, playerPosNoZ, maxOffset) && ComparedTilesInOffset(mouseTileCell, playerTileCell, maxOffset) && (gameCursorScript.isPickaxe == true) && (tileUnderCursor != tileUnderPlayer))
         {
             if (Input.GetMouseButtonDown(0))
             {

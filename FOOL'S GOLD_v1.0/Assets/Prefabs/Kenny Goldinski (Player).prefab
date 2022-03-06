@@ -4982,3 +4982,4 @@ MonoBehaviour:
   gameCursorScript: {fileID: 0}
   miningInfoBox: {fileID: 0}
   maxOffset: {x: 1.5, y: 1.5, z: 1.5}
+  isMining: 0
