@@ -31,8 +31,19 @@ public class LootScoreManager : MonoBehaviour
     {
         miningCounter++;
         Debug.Log(miningCounter);
-        score += 100;
-        Debug.Log(score);
-        scoreText.text = score.ToString();
+
+        int dropRate = Random.Range(1, 10); 
+
+        if (dropRate % 3 == 0)
+        {
+            score += 100;
+            Debug.Log(score);
+
+            scoreText.text = score.ToString();
+        }
+        else
+        {
+            return;
+        }
     }
 }
