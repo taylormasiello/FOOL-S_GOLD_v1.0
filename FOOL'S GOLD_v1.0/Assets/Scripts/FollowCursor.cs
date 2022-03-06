@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FollowCursor : MonoBehaviour
 {
-    public float distance = 10f;
+    [SerializeField] float distance = 10f;
 
     void Update()
     {
