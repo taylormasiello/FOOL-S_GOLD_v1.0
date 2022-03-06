@@ -5,24 +5,53 @@ using UnityEngine.UI;
 
 public class Mining : MonoBehaviour
 {
-    [SerializeField] //slider
+    [SerializeField] Slider miningTimer;
+    [SerializeField] GameObject miningInfoBox;
 
-    //slider min = 0;
-    //slider max = rand float 0.5-3.0;
+    [SerializeField] GameObject realGoldBox;
+    [SerializeField] GameObject foolsGoldBox;
 
-    //rand int for realVSfake drop logic
+    float timerTime;
+    bool isNowMining;
+
+    //rand int for realVSfake drop logic between 1-9
 
     //DELETE CELL on end; player input freeze/unfreeze on start/end of miningAction
     
-    // Start is called before the first frame update
     void Start()
     {
-        
+        miningTimer.minValue = 0;
+        miningTimer.maxValue = Random.Range(0.5f, 3.0f); ;
+        miningTimer.value = timerTime;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        isNowMining = GameObject.Find("Kenny Goldinski (Player)").GetComponent<ToMine>().isMining;
+        float time = timerTime - Time.time;
+
+        if (isNowMining)
+        {
+            miningTimer.value = time;
+            
+            if(miningTimer.maxValue <= miningTimer.minValue)
+            {
+                isNowMining = false;
+                miningInfoBox.SetActive(false);
+
+                //if( randInt 1-9 % 3 = 0)
+                //{
+                //    realGoldBox.SetActive(true);
+                        //increment score
+                        //setActive False after 3 sec delay
+                //}
+                //else
+                //{
+                //    foolsGoldBox.SetActive(true);
+                        //setActive False after 3 sec delay
+                //}
+
+            }
+        }
     }
 }

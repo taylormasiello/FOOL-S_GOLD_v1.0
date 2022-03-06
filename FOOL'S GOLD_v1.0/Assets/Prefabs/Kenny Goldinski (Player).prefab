@@ -4980,4 +4980,5 @@ MonoBehaviour:
   rockTilemap: {fileID: 0}
   playerRb: {fileID: 7948659920367117910}
   gameCursorScript: {fileID: 0}
+  miningInfoBox: {fileID: 0}
   maxOffset: {x: 1.5, y: 1.5, z: 1.5}

@@ -15,7 +15,14 @@ public class ToMine : MonoBehaviour
     [SerializeField] Rigidbody2D playerRb;
     [SerializeField] GameCursor gameCursorScript;
     [SerializeField] GameObject miningInfoBox;
-    [SerializeField] Vector3 maxOffset = new Vector3(2f, 2f, 2f);
+    [SerializeField] Vector3 maxOffset = new Vector3(5f, 5f, 5f);
+
+    public bool isMining;
+
+    void Start()
+    {
+        isMining = false;
+    }
 
     void Update()
     {
@@ -51,6 +58,7 @@ public class ToMine : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 miningInfoBox.SetActive(true);
+                isMining = true;
             }
         }
     }

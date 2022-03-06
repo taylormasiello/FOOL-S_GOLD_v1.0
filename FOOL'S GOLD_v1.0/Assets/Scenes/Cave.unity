@@ -1023,7 +1023,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 879516964}
   m_FillRect: {fileID: 2062115088}
   m_HandleRect: {fileID: 879516963}
@@ -1981,6 +1981,7 @@ GameObject:
   - component: {fileID: 668791227}
   - component: {fileID: 668791229}
   - component: {fileID: 668791228}
+  - component: {fileID: 668791230}
   m_Layer: 5
   m_Name: MiningAction
   m_TagString: Untagged
@@ -2046,6 +2047,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668791226}
   m_CullTransparentMesh: 1
+--- !u!114 &668791230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668791226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7babacb4b6e3642458126020a963cbb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  miningTimer: {fileID: 399217952}
+  miningInfoBox: {fileID: 1782252007}
 --- !u!1 &680651413
 GameObject:
   m_ObjectHideFlags: 0
@@ -66924,7 +66939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backpackBtn: {fileID: 1045953093}
   searchingCursorTexture: {fileID: 2800000, guid: 34b389ce8297f1a41b3d1d76cd8947a3, type: 3}
-  miningCursorTexture: {fileID: 2800000, guid: 120a5b4ae8d41214cb01e1ae42c49052, type: 3}
+  miningCursorTexture: {fileID: 2800000, guid: aba223becead1a441bcfa3786bc6e908, type: 3}
   pickaxe: {fileID: 1277494497}
   torch: {fileID: 2104499962}
   isPickaxe: 0
@@ -92159,7 +92174,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3e8814a9f39cde54691556fe17f17d56, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 306c3de55acacb84dbff7ac8c738acca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
