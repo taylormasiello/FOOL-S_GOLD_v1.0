@@ -24,7 +24,7 @@ public class ToMine : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("ProgressChange", 0.05f, 0.05f);
+        InvokeRepeating("ProgressChange", 0.1f, 0.1f);
         miningProgress.value = 0;
         isMining = false;
     }
@@ -88,7 +88,7 @@ public class ToMine : MonoBehaviour
     {
         if (miningProgress.value < miningProgress.maxValue)
         {
-            miningProgress.value += 0.2f;
+            miningProgress.value += 0.25f;
         }
         else if (miningProgress.value >= miningProgress.maxValue)
         {
