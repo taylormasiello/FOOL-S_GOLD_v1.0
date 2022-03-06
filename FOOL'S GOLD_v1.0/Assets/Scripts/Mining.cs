@@ -19,7 +19,7 @@ public class Mining : MonoBehaviour
     {
         //isNowMining = false;
 
-        //InvokeRepeating("TimePassing", 1.0f, 1.0f);
+        //InvokeRepeating("MiningTime", 5.0f, 5.0f);
         isLootDrop = false;
     }
 
@@ -28,15 +28,22 @@ public class Mining : MonoBehaviour
         MiningAction();
     }
 
-    //void TimePassing()
+    //void MiningTime()
     //{
-    //    time -= Time.deltaTime;
+    //    //miningTime = Random.Range(4.0f, 7.0f);
+    //    miningTime = 5f;
     //}
+
+    void RefillMiningTime()
+    {
+        miningTime = 5f;
+    }
 
     void MiningAction()
     {
-        miningTime = Random.Range(5.0f, 10.0f);
-        
+        ////miningTime = Random.Range(4.0f, 7.0f);
+        miningTime = 5f;
+
         if (miningInfoBox.activeSelf)
         {
             float time = miningTime - Time.time;
@@ -45,7 +52,9 @@ public class Mining : MonoBehaviour
             {
                 //isNowMining = false;
                 miningInfoBox.SetActive(false);
-                Debug.Log("finished mining");
+                ////miningTime = Random.Range(4.0f, 7.0f);
+                //miningTime = 5f;
+                RefillMiningTime();
                 //DELETE CELL on end
                 //player input unfreeze on end of miningAction
 
