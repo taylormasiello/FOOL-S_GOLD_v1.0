@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Rigidbody2D playerRb;
     [SerializeField] Animator playerAnimator;
     [SerializeField] ParticleSystem runSys;
-    //[SerializeField] GameObject miningInfoBox;
+    [SerializeField] GameObject miningInfoBox;
 
     Vector2 movement;
     float moveSpeed = 10f;
@@ -22,14 +22,14 @@ public class PlayerMovement : MonoBehaviour
     {
         CharMovement();
 
-        //if (miningInfoBox.activeInHierarchy)
-        //{
-        //    moveSpeed = 0;
-        //}
-        //else
-        //{
-        //    moveSpeed = 10;
-        //}
+        if (miningInfoBox.activeInHierarchy)
+        {
+            moveSpeed = 0;
+        }
+        else
+        {
+            moveSpeed = 10;
+        }
     }
 
     void FixedUpdate()

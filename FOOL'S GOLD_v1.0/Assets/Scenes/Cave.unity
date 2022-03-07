@@ -99923,10 +99923,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 308118037912268440, guid: a876c345902131840b66ec710ac2f500, type: 3}
-      propertyPath: realGoldBox
-      value: 
-      objectReference: {fileID: 1387011749}
-    - target: {fileID: 308118037912268440, guid: a876c345902131840b66ec710ac2f500, type: 3}
       propertyPath: rockTilemap
       value: 
       objectReference: {fileID: 1685810827}
@@ -99934,10 +99930,6 @@ PrefabInstance:
       propertyPath: tilemapGrid
       value: 
       objectReference: {fileID: 1714630540}
-    - target: {fileID: 308118037912268440, guid: a876c345902131840b66ec710ac2f500, type: 3}
-      propertyPath: foolsGoldBox
-      value: 
-      objectReference: {fileID: 60262693}
     - target: {fileID: 308118037912268440, guid: a876c345902131840b66ec710ac2f500, type: 3}
       propertyPath: miningInfoBox
       value: 
@@ -99998,6 +99990,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kenny Goldinski (Player)
       objectReference: {fileID: 0}
+    - target: {fileID: 3530283319919016823, guid: a876c345902131840b66ec710ac2f500, type: 3}
+      propertyPath: miningInfoBox
+      value: 
+      objectReference: {fileID: 1782252007}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a876c345902131840b66ec710ac2f500, type: 3}
 --- !u!4 &308118037912268438 stripped
