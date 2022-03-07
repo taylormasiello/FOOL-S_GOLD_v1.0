@@ -38,7 +38,7 @@ public class LootScoreManager : MonoBehaviour
     {
         miningCounter++;
 
-        int dropRate = Random.Range(1, 4); 
+        int dropRate = Random.Range(1, 3); 
 
         if (dropRate % 2 == 0)
         {
@@ -47,11 +47,11 @@ public class LootScoreManager : MonoBehaviour
             foolsGoldBox.SetActive(false);
 
             score += 100;
-            scoreText.text = score.ToString();
+
         }
         else
         {
-            timeShown = 1.75f;
+            timeShown = 1.5f;
             foolsGoldBox.SetActive(true);
             realGoldBox.SetActive(false);
         }
@@ -67,6 +67,10 @@ public class LootScoreManager : MonoBehaviour
             if (timeShown <= 0.01f)
             {
                 realGoldBox.SetActive(false);
+            }
+            else if (timeShown <= 1.0f)
+            {
+                scoreText.text = score.ToString();
             }
         }
         else if (foolsGoldBox.activeInHierarchy && !realGoldBox.activeInHierarchy)

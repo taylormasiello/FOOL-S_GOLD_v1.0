@@ -92,7 +92,7 @@ public class ToMine : MonoBehaviour
         canMove = false;
 
         miningProgress.minValue = 0f;
-        miningProgress.maxValue = Random.Range(0.5f, 2.5f);
+        miningProgress.maxValue = Random.Range(0.5f, 1.5f);
         miningProgress.value = 0f;
 
         if(miningProgress.value <= 0.01f)

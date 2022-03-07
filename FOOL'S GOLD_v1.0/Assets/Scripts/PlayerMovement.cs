@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 5f;
     [SerializeField] Rigidbody2D playerRb;
     [SerializeField] Animator playerAnimator;
     [SerializeField] ParticleSystem runSys;
+    //[SerializeField] GameObject miningInfoBox;
 
     Vector2 movement;
+    float moveSpeed = 10f;
 
     void Awake()
     {
@@ -20,6 +21,15 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         CharMovement();
+
+        //if (miningInfoBox.activeInHierarchy)
+        //{
+        //    moveSpeed = 0;
+        //}
+        //else
+        //{
+        //    moveSpeed = 10;
+        //}
     }
 
     void FixedUpdate()
@@ -27,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
         Vector3 playerWorldPos = playerRb.transform.position;
 
         playerRb.MovePosition(playerRb.position + movement * moveSpeed * Time.fixedDeltaTime);
+
+
     }
 
     void CharMovement()
