@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class EndMenu : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class EndMenu : MonoBehaviour
 
     [SerializeField] ParticleSystem pickaxe;
     [SerializeField] ParticleSystem torch;
+
+    [SerializeField] TextMeshProUGUI endScore;
+    [SerializeField] TextMeshProUGUI scoreText;
 
     public void TitleMenu()
     {
@@ -26,5 +30,7 @@ public class EndMenu : MonoBehaviour
             torch.Stop();
             pickaxe.Stop();
         }
+
+        endScore.text = scoreText.text;
     }
 }
