@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameCursor : MonoBehaviour
 {
     [SerializeField] UnityEngine.UI.Button backpackBtn;
+    [SerializeField] GameObject miningInfoBox;
 
     [SerializeField] Texture2D searchingCursorTexture;
     [SerializeField] Texture2D miningCursorTexture;
@@ -13,30 +14,30 @@ public class GameCursor : MonoBehaviour
     [SerializeField] ParticleSystem torch;
 
     public bool isPickaxe;
+    public bool isTorch;
 
 
     void Start()
     {
-        SetSearchingCursor(searchingCursorTexture, torch);
+        
         isPickaxe = false;
+        isTorch = true;
+        InvokeRepeating("ToggleEffects", 0.1f, 0.1f);
+        SetSearchingCursor(searchingCursorTexture, torch);
         backpackBtn.onClick.AddListener(TogglePickaxe);
     }
 
     public void SetSearchingCursor(Texture2D texture, ParticleSystem partSys)
     {
         Cursor.SetCursor(searchingCursorTexture, Vector2.zero, CursorMode.Auto);
-        torch.Play();
-        pickaxe.Stop();
-        pickaxe.Clear();
+        isTorch = true;
     }
 
     public void SetMiningCursor(Texture2D texture, ParticleSystem partSys)
     {
 
         Cursor.SetCursor(miningCursorTexture, Vector2.zero, CursorMode.Auto);
-        pickaxe.Play();
-        torch.Stop();
-        torch.Clear();
+        isTorch = false;
     }
 
     public void TogglePickaxe()
@@ -51,5 +52,23 @@ public class GameCursor : MonoBehaviour
             isPickaxe = false;
             SetSearchingCursor(searchingCursorTexture, torch);
         }
+    }
+
+    void ToggleEffects()
+    {
+        if(isTorch)
+        {
+            torch.Play();
+            pickaxe.Stop();
+            pickaxe.Clear();
+
+        }
+        else
+        {
+            pickaxe.Play();
+            torch.Stop();
+            torch.Clear();
+        }
+
     }
 }

@@ -4982,5 +4982,6 @@ MonoBehaviour:
   gameCursorScript: {fileID: 0}
   miningInfoBox: {fileID: 0}
   miningProgress: {fileID: 0}
+  pickaxe: {fileID: 0}
+  torch: {fileID: 0}
   maxOffset: {x: 1.5, y: 1.5, z: 1.5}
-  canMove: 0

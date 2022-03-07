@@ -427,7 +427,9 @@ MonoBehaviour:
   m_AnimatedTarget: {fileID: 2102979679}
   m_LayerIndex: 0
   m_ShowDebugText: 0
-  m_ChildCameras: []
+  m_ChildCameras:
+  - {fileID: 184471736}
+  - {fileID: 2017871524}
   m_Instructions:
   - m_FullHash: -397766897
     m_VirtualCamera: {fileID: 2017871524}
@@ -66921,11 +66923,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backpackBtn: {fileID: 1045953093}
+  miningInfoBox: {fileID: 1782252007}
   searchingCursorTexture: {fileID: 2800000, guid: 34b389ce8297f1a41b3d1d76cd8947a3, type: 3}
   miningCursorTexture: {fileID: 2800000, guid: aba223becead1a441bcfa3786bc6e908, type: 3}
   pickaxe: {fileID: 1277494497}
   torch: {fileID: 2104499962}
   isPickaxe: 0
+  isTorch: 0
 --- !u!1 &1014521078
 GameObject:
   m_ObjectHideFlags: 0
@@ -99922,6 +99926,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 308118037912268440, guid: a876c345902131840b66ec710ac2f500, type: 3}
+      propertyPath: torch
+      value: 
+      objectReference: {fileID: 2104499962}
+    - target: {fileID: 308118037912268440, guid: a876c345902131840b66ec710ac2f500, type: 3}
+      propertyPath: pickaxe
+      value: 
+      objectReference: {fileID: 1277494497}
     - target: {fileID: 308118037912268440, guid: a876c345902131840b66ec710ac2f500, type: 3}
       propertyPath: rockTilemap
       value: 

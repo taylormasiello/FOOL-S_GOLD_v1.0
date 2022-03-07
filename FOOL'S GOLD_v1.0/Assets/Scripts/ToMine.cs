@@ -18,15 +18,18 @@ public class ToMine : MonoBehaviour
     [SerializeField] GameObject miningInfoBox;
     [SerializeField] Slider miningProgress;
 
+    [SerializeField] ParticleSystem pickaxe;
+    [SerializeField] ParticleSystem torch;
+
     [SerializeField] Vector3 maxOffset = new Vector3(2f, 2f, 2f);
 
-    public bool canMove;
+    Vector3 mousePos;
 
     void Start()
     {
+        Cursor.visible = true;
         InvokeRepeating("ProgressChange", 0.1f, 0.1f);
         miningProgress.value = 0;
-        canMove = true;
     }
 
     void ProgressChange()
@@ -41,14 +44,24 @@ public class ToMine : MonoBehaviour
         }
     }
 
-    //void FixedUpdate()
-    //{
-    //    playerFreeze();    
-    //}
 
     void Update()
     {
         ClickOnRock();
+
+        if (!miningInfoBox.activeInHierarchy)
+        {
+            Cursor.visible = true;
+        }
+        else if (miningInfoBox.activeInHierarchy)
+        {
+            Cursor.visible = false;
+
+            pickaxe.Stop();
+            pickaxe.Clear();
+            torch.Stop();
+            torch.Clear();
+        }
     }
 
     bool PlayerInOffset(Vector3 pos1, Vector3 pos2, Vector3 offset) // compares cursor pos world & player pos world to offset
@@ -63,7 +76,7 @@ public class ToMine : MonoBehaviour
 
     void ClickOnRock()
     {
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 mousePosNoZ = new Vector3(mousePos.x, mousePos.y);// cursor pos, world
 
         Vector3Int mouseTileCell = tilemapGrid.WorldToCell(mousePosNoZ); // cursor pos, cell
@@ -80,8 +93,6 @@ public class ToMine : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {                
                 Mining();
-                //delete cell of rock
-                canMove = true;
             }
         }
     }
@@ -89,7 +100,6 @@ public class ToMine : MonoBehaviour
     void Mining()
     {
         miningInfoBox.SetActive(true);
-        canMove = false;
 
         miningProgress.minValue = 0f;
         miningProgress.maxValue = Random.Range(0.5f, 1.5f);
@@ -100,14 +110,4 @@ public class ToMine : MonoBehaviour
             LootScoreManager.instance.LootDrop();
         }
     }
-
-    //void playerFreeze()
-    //{
-    //    Vector3 playerWorldPos = playerRb.transform.position;
-
-    //    if (!canMove)
-    //    {
-    //        playerRb.MovePosition(playerRb.position * 0 * Time.fixedDeltaTime);
-    //    }
-    //}
 }
