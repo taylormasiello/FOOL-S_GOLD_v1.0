@@ -93,6 +93,7 @@ public class ToMine : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {                
                 Mining();
+                rockTilemap.SetTile(mouseTileCell, null);
             }
         }
     }

@@ -43,7 +43,6 @@ public class LootScoreManager : MonoBehaviour
         if (dropRate % 2 == 0)
         {
             timeShown = 1.5f;
-            //delete cell of rock
 
             realGoldBox.SetActive(true);
             foolsGoldBox.SetActive(false);
@@ -54,7 +53,6 @@ public class LootScoreManager : MonoBehaviour
         else
         {
             timeShown = 1.5f;
-            //delete cell of rock
 
             foolsGoldBox.SetActive(true);
             realGoldBox.SetActive(false);
