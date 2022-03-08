@@ -10,8 +10,8 @@ public class FollowPlayer : MonoBehaviour
 
     void Update()
     {
-        float playerPosX = playerRb.transform.position.x;
-        float playerPosY = (playerRb.transform.position.y - 1.75f);
+        float playerPosX = playerRb.transform.position.x + 5f;
+        float playerPosY = (playerRb.transform.position.y + 0.75f);
         float playerPosZ = playerRb.transform.position.z;
 
         Vector3 playerOffset = new Vector3(playerPosX, playerPosY, playerPosZ);
