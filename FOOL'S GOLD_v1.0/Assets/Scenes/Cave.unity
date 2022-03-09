@@ -66397,11 +66397,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -10.621691, y: 27.342743}
-      - {x: -52.10868, y: 27.169493}
-      - {x: -52.133446, y: -27.003267}
-      - {x: 48.445217, y: -27.009377}
-      - {x: 48.196583, y: 27.319256}
+    - - {x: -10.667525, y: 27.755257}
+      - {x: -52.79695, y: 27.832575}
+      - {x: -52.825844, y: -27.764906}
+      - {x: 48.770836, y: -27.68456}
+      - {x: 48.718063, y: 27.760927}
 --- !u!1 &850824558
 GameObject:
   m_ObjectHideFlags: 0
@@ -100278,22 +100278,6 @@ PrefabInstance:
       propertyPath: miningInfoBox
       value: 
       objectReference: {fileID: 1782252007}
-    - target: {fileID: 5819071949059955038, guid: a876c345902131840b66ec710ac2f500, type: 3}
-      propertyPath: m_Size.x
-      value: 0.96238935
-      objectReference: {fileID: 0}
-    - target: {fileID: 5819071949059955038, guid: a876c345902131840b66ec710ac2f500, type: 3}
-      propertyPath: m_Size.y
-      value: 1.2450576
-      objectReference: {fileID: 0}
-    - target: {fileID: 5819071949059955038, guid: a876c345902131840b66ec710ac2f500, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.029260933
-      objectReference: {fileID: 0}
-    - target: {fileID: 5819071949059955038, guid: a876c345902131840b66ec710ac2f500, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.018526673
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a876c345902131840b66ec710ac2f500, type: 3}
 --- !u!4 &308118037912268438 stripped
