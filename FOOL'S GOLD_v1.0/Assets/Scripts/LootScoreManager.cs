@@ -38,9 +38,9 @@ public class LootScoreManager : MonoBehaviour
     {
         miningCounter++;
 
-        int dropRate = Random.Range(1, 3); 
+        int dropRate = Random.Range(1, 4); 
 
-        if (dropRate % 2 == 0)
+        if (dropRate != 1)
         {
             timeShown = 1.5f;
 

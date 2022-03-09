@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            moveSpeed = 10;
+            moveSpeed = 11;
         }
     }
 
