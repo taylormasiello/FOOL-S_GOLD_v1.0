@@ -1242,7 +1242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endMenu: {fileID: 680651413}
-  timeStart: 60
+  timeStart: 120
   timeLeft: 0
   gameOver: 0
 --- !u!1 &463453143
@@ -100278,6 +100278,22 @@ PrefabInstance:
       propertyPath: miningInfoBox
       value: 
       objectReference: {fileID: 1782252007}
+    - target: {fileID: 5819071949059955038, guid: a876c345902131840b66ec710ac2f500, type: 3}
+      propertyPath: m_Size.x
+      value: 0.96238935
+      objectReference: {fileID: 0}
+    - target: {fileID: 5819071949059955038, guid: a876c345902131840b66ec710ac2f500, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2450576
+      objectReference: {fileID: 0}
+    - target: {fileID: 5819071949059955038, guid: a876c345902131840b66ec710ac2f500, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.029260933
+      objectReference: {fileID: 0}
+    - target: {fileID: 5819071949059955038, guid: a876c345902131840b66ec710ac2f500, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.018526673
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a876c345902131840b66ec710ac2f500, type: 3}
 --- !u!4 &308118037912268438 stripped
