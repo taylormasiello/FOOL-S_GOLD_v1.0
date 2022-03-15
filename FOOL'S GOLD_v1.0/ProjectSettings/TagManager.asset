@@ -18,9 +18,9 @@ TagManager:
   - Player
   - Background
   - Walls
-  - 
-  - 
-  - 
+  - Mask
+  - Black
+  - BehindMask
   - 
   - 
   - 
@@ -61,4 +61,7 @@ TagManager:
     locked: 0
   - name: Effects
     uniqueID: 502290721
+    locked: 0
+  - name: Top
+    uniqueID: 3858273923
     locked: 0
