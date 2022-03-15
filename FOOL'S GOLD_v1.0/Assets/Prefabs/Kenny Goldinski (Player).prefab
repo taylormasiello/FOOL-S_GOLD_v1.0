@@ -4985,4 +4985,5 @@ MonoBehaviour:
   pickaxe: {fileID: 0}
   torch: {fileID: 0}
   fieldOfView: {fileID: 0}
+  pickaxeFov: {fileID: 0}
   maxOffset: {x: 1.5, y: 1.5, z: 1.5}

@@ -92009,6 +92009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee034173e034cab4fb76c1516ef3c6c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameCursor: {fileID: 996869460}
   layerMask:
     serializedVersion: 2
     m_Bits: 512
@@ -100315,6 +100316,10 @@ PrefabInstance:
       propertyPath: pickaxe
       value: 
       objectReference: {fileID: 1277494497}
+    - target: {fileID: 308118037912268440, guid: a876c345902131840b66ec710ac2f500, type: 3}
+      propertyPath: pickaxeFov
+      value: 
+      objectReference: {fileID: 1371976711}
     - target: {fileID: 308118037912268440, guid: a876c345902131840b66ec710ac2f500, type: 3}
       propertyPath: fieldOfView
       value: 

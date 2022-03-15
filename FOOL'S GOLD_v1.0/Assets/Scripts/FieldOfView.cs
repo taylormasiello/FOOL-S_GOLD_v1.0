@@ -5,8 +5,9 @@ using CodeMonkey.Utils;
 
 public class FieldOfView : MonoBehaviour
 {
-
+    [SerializeField] private GameCursor gameCursor;
     [SerializeField] private LayerMask layerMask;
+    
     private Mesh mesh;
     private float fov;
     private Vector3 origin;
@@ -16,16 +17,21 @@ public class FieldOfView : MonoBehaviour
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
-        fov = 90f;
+        fov = 45f;
         origin = Vector3.zero;
     }
 
-    private void LateUpdate()
-    {       
+    //private void LateUpdate()
+    //{
+    //    PickaxeFieldOfView();
+    //}
+
+    public void PickaxeFieldOfView()
+    {
         int rayCount = 25;
         float angle = startingAngle;
         float angleIncrease = fov / rayCount;
-        float viewDistance = 5f;
+        float viewDistance = 7.5f;
 
         Vector3[] vertices = new Vector3[rayCount + 1 + 1];
         Vector2[] uv = new Vector2[vertices.Length];

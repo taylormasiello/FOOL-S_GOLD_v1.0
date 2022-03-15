@@ -23,6 +23,7 @@ public class ToMine : MonoBehaviour
     [SerializeField] ParticleSystem torch;
 
     [SerializeField] private FieldOfView fieldOfView;
+    [SerializeField] private GameObject pickaxeFov;
 
     [SerializeField] Vector3 maxOffset = new Vector3(2f, 2f, 2f);
 
@@ -30,6 +31,7 @@ public class ToMine : MonoBehaviour
 
     void Start()
     {
+        pickaxeFov.SetActive(false);
         Cursor.visible = true;
         InvokeRepeating("ProgressChange", 0.1f, 0.1f);
         miningProgress.value = 0;
@@ -65,6 +67,20 @@ public class ToMine : MonoBehaviour
             torch.Stop();
             torch.Clear();
         }
+    }
+
+    void LateUpdate()
+    {
+        fieldOfView.PickaxeFieldOfView();
+        
+        if (gameCursorScript.isPickaxe)
+        {
+            pickaxeFov.SetActive(true);
+        } else if (!gameCursorScript.isPickaxe)
+        {
+            pickaxeFov.SetActive(false);
+        }
+        
     }
 
     bool PlayerInOffset(Vector3 pos1, Vector3 pos2, Vector3 offset) // compares cursor pos world & player pos world to offset
