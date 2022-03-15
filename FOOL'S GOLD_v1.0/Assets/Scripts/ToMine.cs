@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 //using UnityEngine.UIElements;
 using UnityEngine.Tilemaps;
+using CodeMonkey.Utils;
 
 public class ToMine : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class ToMine : MonoBehaviour
 
     [SerializeField] ParticleSystem pickaxe;
     [SerializeField] ParticleSystem torch;
+
+    [SerializeField] private FieldOfView fieldOfView;
 
     [SerializeField] Vector3 maxOffset = new Vector3(2f, 2f, 2f);
 
@@ -87,6 +90,9 @@ public class ToMine : MonoBehaviour
 
         Vector3Int playerTileCell = tilemapGrid.WorldToCell(playerPosNoZ); //player pos, cell
         TileBase tileUnderPlayer = rockTilemap.GetTile(playerTileCell); //tile under player
+
+        fieldOfView.SetCursorDirection(UtilsClass.GetMouseWorldPosition() - playerPos);
+        fieldOfView.SetOrigin(playerPosNoZ);              
 
         if (PlayerInOffset(mousePosNoZ, playerPosNoZ, maxOffset) && ComparedTilesInOffset(mouseTileCell, playerTileCell, maxOffset) && (gameCursorScript.isPickaxe == true) && (tileUnderCursor != tileUnderPlayer))
         {
