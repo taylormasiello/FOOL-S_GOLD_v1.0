@@ -92024,12 +92024,12 @@ GameObject:
   - component: {fileID: 1371976713}
   - component: {fileID: 1371976712}
   - component: {fileID: 1371976716}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: FieldOfView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!23 &1371976712
 MeshRenderer:
@@ -92095,7 +92095,7 @@ MonoBehaviour:
   gameCursor: {fileID: 996869460}
   layerMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1536
 --- !u!4 &1371976715
 Transform:
   m_ObjectHideFlags: 0
@@ -95491,7 +95491,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104499959}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3, y: 0.4, z: 0}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1686522141}
@@ -95517,7 +95517,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

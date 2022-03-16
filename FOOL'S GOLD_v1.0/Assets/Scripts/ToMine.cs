@@ -70,9 +70,7 @@ public class ToMine : MonoBehaviour
     }
 
     void LateUpdate()
-    {
-        fieldOfView.PickaxeFieldOfView();
-        
+    {     
         if (gameCursorScript.isPickaxe)
         {
             pickaxeFov.SetActive(true);

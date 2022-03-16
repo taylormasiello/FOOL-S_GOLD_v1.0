@@ -21,10 +21,10 @@ public class FieldOfView : MonoBehaviour
         origin = Vector3.zero;
     }
 
-    //private void LateUpdate()
-    //{
-    //    PickaxeFieldOfView();
-    //}
+    void LateUpdate()
+    {
+        PickaxeFieldOfView();
+    }
 
     public void PickaxeFieldOfView()
     {
