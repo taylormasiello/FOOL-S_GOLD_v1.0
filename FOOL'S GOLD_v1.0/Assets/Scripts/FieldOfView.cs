@@ -17,7 +17,7 @@ public class FieldOfView : MonoBehaviour
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
-        fov = 60f;
+        fov = 50f;
         origin = Vector3.zero;
     }
 
@@ -31,7 +31,7 @@ public class FieldOfView : MonoBehaviour
         int rayCount = 25;
         float angle = startingAngle;
         float angleIncrease = fov / rayCount;
-        float viewDistance = 7.5f;
+        float viewDistance = 9f;
 
         Vector3[] vertices = new Vector3[rayCount + 1 + 1];
         Vector2[] uv = new Vector2[vertices.Length];
@@ -43,7 +43,7 @@ public class FieldOfView : MonoBehaviour
         int triangleIndex = 0;
         for (int i = 0; i < rayCount; i++)
         {
-            Vector3 vertex; // = origin + UtilsClass.GetVectorFromAngle(angle) * viewDistance;
+            Vector3 vertex;
             RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, UtilsClass.GetVectorFromAngle(angle), viewDistance, layerMask);
 
             if (raycastHit2D.collider == null)

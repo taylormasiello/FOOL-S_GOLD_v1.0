@@ -24,6 +24,7 @@ public class ToMine : MonoBehaviour
 
     [SerializeField] private FieldOfView fieldOfView;
     [SerializeField] private GameObject pickaxeFov;
+    [SerializeField] GameObject black;
 
     [SerializeField] Vector3 maxOffset = new Vector3(2f, 2f, 2f);
 
@@ -74,9 +75,11 @@ public class ToMine : MonoBehaviour
         if (gameCursorScript.isPickaxe)
         {
             pickaxeFov.SetActive(true);
+            black.SetActive(true);
         } else if (!gameCursorScript.isPickaxe)
         {
             pickaxeFov.SetActive(false);
+            black.SetActive(false);
         }
         
     }
