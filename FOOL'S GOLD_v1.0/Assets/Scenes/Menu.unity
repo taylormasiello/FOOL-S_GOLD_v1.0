@@ -1493,7 +1493,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1373.2373, y: -752.84}
+  m_AnchoredPosition: {x: -1373.2373, y: -743}
   m_SizeDelta: {x: 1018.1432, y: 654.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &857647179
@@ -2316,8 +2316,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.9448, y: -740.44}
-  m_SizeDelta: {x: 1611.4683, y: 629.53}
+  m_AnchoredPosition: {x: 1.232, y: -742}
+  m_SizeDelta: {x: 1730.8, y: 676}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1061443684
 MonoBehaviour:
@@ -3339,7 +3339,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1375, y: -752.78}
+  m_AnchoredPosition: {x: 1375, y: -742.93994}
   m_SizeDelta: {x: 1016.7, y: 654.46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1579503003
@@ -4066,15 +4066,18 @@ MonoBehaviour:
     it
 
 
-    Be sure to click on "gold" as you can''t mine Kenny
+    Be sure to click on "gold" cause ya can''t mine Kenny
 
 
-    Ya''ll can
-    only mine when Kenny''s pickaxe is equiped
+    Kenny can''t
+    run while mining
 
 
-    Kenny can see much more clearly
-    when carrying his torch'
+    Ya''ll can only mine when Kenny''s pickaxe is equiped
+
+
+    Kenny
+    can see much more clearly when carrying his torch'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9557b8e0c1dad5042b52f7a4248f231c, type: 2}
   m_sharedMaterial: {fileID: -2466246401537646002, guid: 9557b8e0c1dad5042b52f7a4248f231c, type: 2}
@@ -4101,8 +4104,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 57
-  m_fontSizeBase: 57
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4113,7 +4116,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 25
+  m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -4137,7 +4140,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -39.68762, y: -14.8859215, z: -44.648247, w: -39.695038}
+  m_margin: {x: 13.84491, y: 8.910646, z: 8.884101, w: -15.89856}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
