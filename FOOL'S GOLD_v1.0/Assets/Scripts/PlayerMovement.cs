@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] GameObject miningInfoBox;
 
     Vector2 movement;
-    float moveSpeed = 10f;
+    float moveSpeed = 9.5f;
 
     void Awake()
     {
