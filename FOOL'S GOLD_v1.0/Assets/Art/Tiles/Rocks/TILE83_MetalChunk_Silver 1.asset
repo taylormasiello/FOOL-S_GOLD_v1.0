@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: cristal_2
+  m_Name: TILE83_MetalChunk_Silver 1
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 7345e711ac3dcb24baf722844a50f8e2, type: 3}
-  m_Color: {r: 1, g: 0.9803922, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 244132bb11a82844393162cc38b0efce, type: 3}
+  m_Color: {r: 0.8396226, g: 0.5950369, b: 0, a: 1}
   m_Transform:
     e00: 1
     e01: 0
