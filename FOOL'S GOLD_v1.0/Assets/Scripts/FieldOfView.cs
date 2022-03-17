@@ -17,7 +17,7 @@ public class FieldOfView : MonoBehaviour
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
-        fov = 50f;
+        fov = 55f;
         origin = Vector3.zero;
     }
 
@@ -28,7 +28,7 @@ public class FieldOfView : MonoBehaviour
 
     public void PickaxeFieldOfView()
     {
-        int rayCount = 25;
+        int rayCount = 30;
         float angle = startingAngle;
         float angleIncrease = fov / rayCount;
         float viewDistance = 9f;
