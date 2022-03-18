@@ -3999,10 +3999,10 @@ MonoBehaviour:
   m_enableVertexGradient: 1
   m_colorMode: 0
   m_fontColorGradient:
-    topLeft: {r: 0.61, g: 0.052599188, b: 0.039569214, a: 1}
-    topRight: {r: 0.61, g: 0.052599188, b: 0.039569214, a: 1}
-    bottomLeft: {r: 0.61, g: 0.052599188, b: 0.039569214, a: 1}
-    bottomRight: {r: 0.61, g: 0.052599188, b: 0.039569214, a: 1}
+    topLeft: {r: 0.61, g: 0.052599188, b: 0.039569214, a: 0.8}
+    topRight: {r: 0.61, g: 0.052599188, b: 0.039569214, a: 0.8}
+    bottomLeft: {r: 0.61, g: 0.052599188, b: 0.039569214, a: 0.8}
+    bottomRight: {r: 0.61, g: 0.052599188, b: 0.039569214, a: 0.8}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
