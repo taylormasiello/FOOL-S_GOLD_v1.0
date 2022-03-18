@@ -31,7 +31,7 @@ public class LootScoreManager : MonoBehaviour
 
         InvokeRepeating("timeBoxShown", 0.5f, 0.5f);
         //miningCounter = 0;
-        highScore = PlayerPrefs.GetInt("highscore", 0);
+        highScore = PlayerPrefs.GetInt("highScore", 0);
         scoreText.text = score.ToString();
         //highScoreText.text = highScore.ToString();
     }
@@ -53,7 +53,7 @@ public class LootScoreManager : MonoBehaviour
 
             if (highScore < score)
             {
-                PlayerPrefs.SetInt("highscore", score);
+                PlayerPrefs.SetInt("highScore", score);
             }          
         }
         else

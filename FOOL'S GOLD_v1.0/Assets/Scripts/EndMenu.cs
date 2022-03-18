@@ -22,6 +22,11 @@ public class EndMenu : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    public void ResetHighScore()
+    {
+        PlayerPrefs.DeleteKey("highScore");
+    }
+
     void Update()
     {
         if (endMenu.activeInHierarchy == true)
