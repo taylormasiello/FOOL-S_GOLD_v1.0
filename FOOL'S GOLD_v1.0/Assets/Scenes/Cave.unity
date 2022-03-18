@@ -659,7 +659,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -676,7 +676,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184471735}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.3089164, y: 5.4846053, z: -7.7346845}
+  m_LocalPosition: {x: 1.3040556, y: 5.4846053, z: -7.7346845}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2144083966}
@@ -2164,7 +2164,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 14
+  orthographic size: 7.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2188,7 +2188,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.019443512, y: 0.077778816, z: -10}
+  m_LocalPosition: {x: 0.0078121424, y: 0.041667223, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1686522141}
@@ -2639,6 +2639,7 @@ MonoBehaviour:
   torch: {fileID: 2104499962}
   endScore: {fileID: 1183893917}
   scoreText: {fileID: 760063659}
+  endHighScoreText: {fileID: 2115955317}
 --- !u!1 &729056823
 GameObject:
   m_ObjectHideFlags: 0
@@ -88349,7 +88350,7 @@ GameObject:
   - component: {fileID: 1183893918}
   - component: {fileID: 1183893917}
   m_Layer: 5
-  m_Name: GameScore
+  m_Name: GameScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96444,6 +96445,7 @@ MonoBehaviour:
   foolsGoldBox: {fileID: 60262693}
   miningSlider: {fileID: 399217952}
   scoreText: {fileID: 760063659}
+  highScoreText: {fileID: 2115955317}
 --- !u!1 &1943906401
 GameObject:
   m_ObjectHideFlags: 0
@@ -96737,7 +96739,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2017871521}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.2998892, y: 5.448494, z: -7.7346845}
+  m_LocalPosition: {x: 1.2972851, y: 5.448494, z: -7.7346845}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 432457842}
@@ -96790,7 +96792,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -101930,7 +101932,7 @@ GameObject:
   - component: {fileID: 2115955318}
   - component: {fileID: 2115955317}
   m_Layer: 5
-  m_Name: PersistedScore
+  m_Name: PersistedScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

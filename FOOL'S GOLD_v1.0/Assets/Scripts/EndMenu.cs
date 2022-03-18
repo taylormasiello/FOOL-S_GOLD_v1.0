@@ -14,6 +14,7 @@ public class EndMenu : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI endScore;
     [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] TextMeshProUGUI endHighScoreText;
 
     public void TitleMenu()
     {
@@ -32,5 +33,6 @@ public class EndMenu : MonoBehaviour
         }
 
         endScore.text = scoreText.text;
+        endHighScoreText.text = LootScoreManager.highScore.ToString();
     }
 }

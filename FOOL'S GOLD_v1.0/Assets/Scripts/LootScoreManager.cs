@@ -14,11 +14,11 @@ public class LootScoreManager : MonoBehaviour
     [SerializeField] Slider miningSlider;
 
     [SerializeField] TextMeshProUGUI scoreText;
-    // [SerializeField] TextMeshProUGUI highScoreText;
+    //[SerializeField] TextMeshProUGUI highScoreText;
 
+    public static int highScore = 0;
     int score = 0;
-    int miningCounter;
-    // int highScore = 0;
+    //int miningCounter;
     float timeShown;
 
     void Awake()
@@ -28,15 +28,17 @@ public class LootScoreManager : MonoBehaviour
 
     void Start()
     {
+
         InvokeRepeating("timeBoxShown", 0.5f, 0.5f);
-        miningCounter = 0;
+        //miningCounter = 0;
+        highScore = PlayerPrefs.GetInt("highscore", 0);
         scoreText.text = score.ToString();
-        // highScoreText.text = highScore.ToString();
+        //highScoreText.text = highScore.ToString();
     }
         
     public void LootDrop()
     {
-        miningCounter++;
+        //miningCounter++;
 
         int dropRate = Random.Range(1, 4); 
 
@@ -49,6 +51,10 @@ public class LootScoreManager : MonoBehaviour
 
             score += 100;
 
+            if (highScore < score)
+            {
+                PlayerPrefs.SetInt("highscore", score);
+            }          
         }
         else
         {
