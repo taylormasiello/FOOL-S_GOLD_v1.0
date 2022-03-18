@@ -24,18 +24,23 @@ public class LootScoreManager : MonoBehaviour
     void Awake()
     {
         instance = this;
+        highScore = PlayerPrefs.GetInt("highScore", 0);
     }
 
     void Start()
     {
 
         InvokeRepeating("timeBoxShown", 0.5f, 0.5f);
-        //miningCounter = 0;
-        highScore = PlayerPrefs.GetInt("highScore", 0);
+        //miningCounter = 0;        
         scoreText.text = score.ToString();
         //highScoreText.text = highScore.ToString();
     }
-        
+
+    void Update()
+    {
+        highScore = PlayerPrefs.GetInt("highScore", 0);
+    }
+
     public void LootDrop()
     {
         //miningCounter++;
@@ -51,7 +56,7 @@ public class LootScoreManager : MonoBehaviour
 
             score += 100;
 
-            if (highScore < score)
+            if (highScore <= score)
             {
                 PlayerPrefs.SetInt("highScore", score);
             }          
