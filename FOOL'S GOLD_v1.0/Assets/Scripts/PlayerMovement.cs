@@ -21,6 +21,13 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         CharMovement();
+    }
+
+    void FixedUpdate()
+    {
+        Vector3 playerWorldPos = playerRb.transform.position;
+
+        playerRb.MovePosition(playerRb.position + movement * moveSpeed * Time.fixedDeltaTime);
 
         if (miningInfoBox.activeInHierarchy)
         {
@@ -30,15 +37,6 @@ public class PlayerMovement : MonoBehaviour
         {
             moveSpeed = 12;
         }
-    }
-
-    void FixedUpdate()
-    {
-        Vector3 playerWorldPos = playerRb.transform.position;
-
-        playerRb.MovePosition(playerRb.position + movement * moveSpeed * Time.fixedDeltaTime);
-
-
     }
 
     void CharMovement()
