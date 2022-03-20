@@ -36,17 +36,13 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         GameIsPaused = false;
         Time.timeScale = 1f;
-
-        //Cursor.SetCursor(searchingCursor, Vector2.zero, CursorMode.Auto);
     }
 
     public void Pause()
     {
         pauseMenuUI.SetActive(true);
         GameIsPaused = true;
-        Time.timeScale = 0f;
-
-        //Cursor.SetCursor(pauseCursor, Vector2.zero, CursorMode.Auto);           
+        Time.timeScale = 0f;         
     }
 
     public void LoadMenu()
