@@ -11,7 +11,7 @@ public class EndMenu : MonoBehaviour
 
     [SerializeField] ParticleSystem pickaxe;
     [SerializeField] ParticleSystem torch;
-
+    
     [SerializeField] TextMeshProUGUI endScore;
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI endHighScoreText;

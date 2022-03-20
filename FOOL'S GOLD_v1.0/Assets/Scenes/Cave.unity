@@ -2648,7 +2648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endMenu: {fileID: 680651413}
-  endMenuCursor: {fileID: 2800000, guid: 23a123305ebba704f8bc4f0247b37ec1, type: 3}
+  endMenuCursor: {fileID: 2800000, guid: 951f5b53cf5f10f449a7e8317b8752cf, type: 3}
   pickaxe: {fileID: 1277494497}
   torch: {fileID: 2104499962}
   endScore: {fileID: 1183893917}

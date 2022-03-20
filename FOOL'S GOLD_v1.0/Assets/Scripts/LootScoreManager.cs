@@ -12,7 +12,6 @@ public class LootScoreManager : MonoBehaviour
     [SerializeField] GameObject foolsGoldBox;
     
     [SerializeField] Slider miningSlider;
-    // [SerializeField] AudioManager audioManager;
     [SerializeField] TextMeshProUGUI scoreText;
 
     public static int highScore = 0;

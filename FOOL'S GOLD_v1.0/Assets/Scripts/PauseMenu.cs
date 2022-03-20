@@ -37,7 +37,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
         Time.timeScale = 1f;
 
-        Cursor.SetCursor(searchingCursor, Vector2.zero, CursorMode.Auto);
+        //Cursor.SetCursor(searchingCursor, Vector2.zero, CursorMode.Auto);
     }
 
     public void Pause()
@@ -46,7 +46,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
         Time.timeScale = 0f;
 
-        Cursor.SetCursor(pauseCursor, Vector2.zero, CursorMode.Auto);           
+        //Cursor.SetCursor(pauseCursor, Vector2.zero, CursorMode.Auto);           
     }
 
     public void LoadMenu()

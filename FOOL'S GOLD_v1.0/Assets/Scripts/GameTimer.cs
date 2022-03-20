@@ -25,6 +25,19 @@ public class GameTimer : MonoBehaviour
     void Update()
     {
         RunningTimer();
+
+        if (timeLeft < 3 && timeLeft > 2.99)
+        {
+            FindObjectOfType<AudioManager>().PlaySound("TimeTicking");
+        } else if (timeLeft <= 0.1)
+        {
+            FindObjectOfType<AudioManager>().StopSound("TimeTicking");
+        } 
+        
+        if (timeLeft <= 0.1 && timeLeft >= 0.09)
+        {
+            FindObjectOfType<AudioManager>().PlaySound("EndLevel");
+        }
     }
 
     public void StartTimer()
