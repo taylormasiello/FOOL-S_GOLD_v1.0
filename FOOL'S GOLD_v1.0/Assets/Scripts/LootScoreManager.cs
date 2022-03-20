@@ -8,7 +8,7 @@ public class LootScoreManager : MonoBehaviour
 {
     public static LootScoreManager instance;
 
-    [SerializeField] GameObject miningInfoBox;
+    // [SerializeField] GameObject miningInfoBox;
     [SerializeField] GameObject realGoldBox;
     [SerializeField] GameObject foolsGoldBox;
     
@@ -60,9 +60,7 @@ public class LootScoreManager : MonoBehaviour
         else
         {
             timeShown = 1.5f;
-
             
-
             foolsGoldBox.SetActive(true);
             realGoldBox.SetActive(false);
         }        
@@ -73,13 +71,15 @@ public class LootScoreManager : MonoBehaviour
         if (realGoldBox.activeInHierarchy && !foolsGoldBox.activeInHierarchy)
         {
             timeShown -= 0.5f;
+            scoreText.text = score.ToString();
             
+
             if (timeShown <= 0.01f)
             {
                 realGoldBox.SetActive(false);
-                
+
             }
-            else if (timeShown <= 0.675f)
+            else if (timeShown <= 0.65f)
             {
                 scoreText.text = score.ToString();
                 audioManager.PlaySound("RealGoldDrop");
@@ -89,11 +89,12 @@ public class LootScoreManager : MonoBehaviour
         {
             timeShown -= 0.5f;
             
+
             if (timeShown <= 0.01f)
             {
                 foolsGoldBox.SetActive(false);
             }
-            else if (timeShown <= 0.9f)
+            else if (timeShown <= 0.65f)
             {
                 audioManager.PlaySound("FoolGoldDrop");
             }

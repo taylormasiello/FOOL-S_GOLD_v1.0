@@ -8,12 +8,12 @@ public class Sound
 
     public AudioClip clip;
 
-    [Range(0f,1f)]
-    public float volume; 
-    [Range (0f, 3f)]
-    public float pitch;
-    [SerializeField] public bool loop;
+    [Range(0f,1f)] public float volume; 
+    [Range (0f, 3f)] public float pitch;
+    [Range(0f, 1f)] public float spatialBlend;
 
-    [HideInInspector]
-    public AudioSource source;
+    [SerializeField] public bool loop;
+    [SerializeField] public bool playOnAwake;
+
+    [HideInInspector] public AudioSource source;
 }

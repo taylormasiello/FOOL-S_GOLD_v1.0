@@ -88685,13 +88685,17 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 7a87aa526dcc1de49b2d9866cb3dd78c, type: 3}
     volume: 0.3
     pitch: 1
+    spatialBlend: 0
     loop: 0
+    playOnAwake: 0
     source: {fileID: 0}
   - name: FoolGoldDrop
     clip: {fileID: 8300000, guid: 5fdb13d3756c84fecac96f5a2d124370, type: 3}
     volume: 0.3
     pitch: 1
+    spatialBlend: 0
     loop: 0
+    playOnAwake: 0
     source: {fileID: 0}
 --- !u!1 &1277494494
 GameObject:
@@ -96764,7 +96768,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bb392f5be701b8429885283a249ff92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  miningInfoBox: {fileID: 1782252007}
   realGoldBox: {fileID: 1387011749}
   foolsGoldBox: {fileID: 60262693}
   miningSlider: {fileID: 399217952}
