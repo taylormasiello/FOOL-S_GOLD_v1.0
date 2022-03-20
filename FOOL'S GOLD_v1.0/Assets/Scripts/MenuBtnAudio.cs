@@ -11,7 +11,7 @@ public class MenuBtnAudio : MonoBehaviour
 
     public void EscApp()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Backslash))
         {
             Application.Quit();
         }

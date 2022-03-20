@@ -124,6 +124,7 @@ public class ToMine : MonoBehaviour
     void Mining()
     {
         miningInfoBox.SetActive(true);
+        FindObjectOfType<AudioManager>().PlaySound("MiningAction");
 
         miningProgress.minValue = 0f;
         miningProgress.maxValue = Random.Range(0.5f, 1.5f);

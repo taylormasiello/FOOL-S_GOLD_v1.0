@@ -70,7 +70,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Theme
     clip: {fileID: 8300000, guid: c30fb566db8d61c47b24b39f932ba848, type: 3}
-    volume: 0.65
+    volume: 0.625
     pitch: 1
     spatialBlend: 0
     loop: 1
@@ -86,8 +86,16 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: TimeTicking
     clip: {fileID: 8300000, guid: c5e2a73ad4706440f93bf05df0b465fe, type: 3}
-    volume: 0.4
+    volume: 0.5
     pitch: 0.509
+    spatialBlend: 0
+    loop: 1
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: MiningAction
+    clip: {fileID: 8300000, guid: 6347b13274aec8447acba33e71797cc2, type: 3}
+    volume: 0.75
+    pitch: 2.8
     spatialBlend: 0
     loop: 1
     playOnAwake: 0

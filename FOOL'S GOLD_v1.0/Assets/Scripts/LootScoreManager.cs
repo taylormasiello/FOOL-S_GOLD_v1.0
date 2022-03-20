@@ -10,7 +10,9 @@ public class LootScoreManager : MonoBehaviour
 
     [SerializeField] GameObject realGoldBox;
     [SerializeField] GameObject foolsGoldBox;
-    
+    [SerializeField] GameObject miningInfoBox;
+    [SerializeField] GameObject endScreen;
+
     [SerializeField] Slider miningSlider;
     [SerializeField] TextMeshProUGUI scoreText;
 
@@ -66,6 +68,15 @@ public class LootScoreManager : MonoBehaviour
 
     void timeBoxShown()
     {  
+        //MiningActionSFX
+        if (miningInfoBox.activeInHierarchy && !realGoldBox.activeInHierarchy && !foolsGoldBox.activeInHierarchy)
+        {
+            FindObjectOfType<AudioManager>().PlaySound("MiningAction");
+        } else if (realGoldBox.activeInHierarchy || foolsGoldBox.activeInHierarchy || endScreen.activeInHierarchy)
+        {
+            FindObjectOfType<AudioManager>().StopSound("MiningAction");
+        }
+
         if (realGoldBox.activeInHierarchy && !foolsGoldBox.activeInHierarchy)
         {
             timeShown -= 0.5f;
@@ -82,8 +93,7 @@ public class LootScoreManager : MonoBehaviour
                 scoreText.text = score.ToString();
                 FindObjectOfType<AudioManager>().PlaySound("RealGoldDrop");
             }
-        }
-        else if (foolsGoldBox.activeInHierarchy && !realGoldBox.activeInHierarchy)
+        } else if (foolsGoldBox.activeInHierarchy && !realGoldBox.activeInHierarchy)
         {
             timeShown -= 0.5f;
             

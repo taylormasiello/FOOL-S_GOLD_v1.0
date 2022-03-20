@@ -96759,6 +96759,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   realGoldBox: {fileID: 1387011749}
   foolsGoldBox: {fileID: 60262693}
+  miningInfoBox: {fileID: 1782252007}
+  endScreen: {fileID: 680651413}
   miningSlider: {fileID: 399217952}
   scoreText: {fileID: 760063659}
 --- !u!1 &1943906401
