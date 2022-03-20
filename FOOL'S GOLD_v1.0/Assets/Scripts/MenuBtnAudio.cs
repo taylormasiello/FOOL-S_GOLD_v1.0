@@ -8,4 +8,18 @@ public class MenuBtnAudio : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().PlaySound("MenuClick");
     }
+
+    public void EscApp()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+            Debug.Log("QUIT");
+        }
+    }
+
+    void Update()
+    {
+        EscApp();        
+    }
 }

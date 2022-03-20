@@ -47,11 +47,6 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
     }
 
-    //public void PlayMenuBtnClick()
-    //{
-    //    PlaySound("MenuClick");
-    //}
-
     void Start()
     {
         PlaySound("Theme");

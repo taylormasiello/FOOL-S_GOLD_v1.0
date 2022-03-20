@@ -20,22 +20,9 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    //public void clickAudio()
-    //{
-    //    FindObjectOfType<AudioManager>().PlaySound("MenuClick");
-    //}
-
     void Start()
     {
         Time.timeScale = 0;
         Cursor.SetCursor(menuCursor, Vector2.zero, CursorMode.Auto);
-    }
-
-    void Update()
-    {
-        //if (mainMenuUI.activeInHierarchy && Input.GetMouseButtonDown(0))
-        //{
-        //    clickAudio();
-        //}
     }
 }
