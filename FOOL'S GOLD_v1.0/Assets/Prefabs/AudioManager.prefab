@@ -116,3 +116,19 @@ MonoBehaviour:
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
+  - name: WallBump
+    clip: {fileID: 8300000, guid: 1a0c375b89064544a80acbf6be82a06e, type: 3}
+    volume: 0.35
+    pitch: 2
+    spatialBlend: 0
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: RockBump
+    clip: {fileID: 8300000, guid: edae8a199c1540e4ab11086d1d18915d, type: 3}
+    volume: 0.7
+    pitch: 1
+    spatialBlend: 0
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}

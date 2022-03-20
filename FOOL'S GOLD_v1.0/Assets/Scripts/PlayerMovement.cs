@@ -48,4 +48,17 @@ public class PlayerMovement : MonoBehaviour
         playerAnimator.SetFloat("Vertical", movement.y);
         playerAnimator.SetFloat("Speed", movement.sqrMagnitude);
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Walls")
+        {
+            FindObjectOfType<AudioManager>().PlaySound("WallBump");
+        }
+
+        if(collision.gameObject.tag == "Rocks")
+        {
+            FindObjectOfType<AudioManager>().PlaySound("RockBump");
+        }
+    }
 }
