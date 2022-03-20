@@ -2921,9 +2921,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "CONTROLS:\n\nMove: WASD/Arrow Keys\n\nMine: Mouse Click On \"Gold\"\n\nEquip/Unequip
-    (Toggle) Torch/Pickaxe: \nMouse Click on Kenny's Backpack\n\nPause: Tab Key\n\nQuit
-    Program: Backslash Key"
+  m_text: "CONTROLS:\n\nMove: W,A,S,D or Arrow Keys\n\nMine: Mouse Click On \"Gold\"\n\nEquip
+    Torch/Equip Pickaxe(Toggle): \nMouse Click on Kenny's Backpack\n\nPause: Tab
+    Key\n\nQuit Program: Backslash Key"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9557b8e0c1dad5042b52f7a4248f231c, type: 2}
   m_sharedMaterial: {fileID: -2466246401537646002, guid: 9557b8e0c1dad5042b52f7a4248f231c, type: 2}
@@ -2986,7 +2986,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.587828, y: 45.779194, z: 4.668094, w: 15.766907}
+  m_margin: {x: -29.36541, y: 45.779194, z: -52.88708, w: 15.766907}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
