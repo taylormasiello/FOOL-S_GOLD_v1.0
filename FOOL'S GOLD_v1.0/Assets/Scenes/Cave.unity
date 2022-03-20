@@ -1592,7 +1592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endMenu: {fileID: 680651413}
-  timeStart: 210
+  timeStart: 10
   timeLeft: 0
   gameOver: 0
 --- !u!1 &463453143
@@ -2638,6 +2638,7 @@ MonoBehaviour:
   endMenuCursor: {fileID: 2800000, guid: 23a123305ebba704f8bc4f0247b37ec1, type: 3}
   pickaxe: {fileID: 1277494497}
   torch: {fileID: 2104499962}
+  audioManager: {fileID: 0}
   endScore: {fileID: 1183893917}
   scoreText: {fileID: 760063659}
   endHighScoreText: {fileID: 2115955317}
@@ -88637,66 +88638,6 @@ Transform:
   m_Father: {fileID: 443985314}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1255988644
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1255988645}
-  - component: {fileID: 1255988646}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1255988645
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1255988644}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1255988646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1255988644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a86d2c34b132f0945b2a6d6033129d78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: RealGoldDrop
-    clip: {fileID: 8300000, guid: 7a87aa526dcc1de49b2d9866cb3dd78c, type: 3}
-    volume: 0.3
-    pitch: 1
-    spatialBlend: 0
-    loop: 0
-    playOnAwake: 0
-    source: {fileID: 0}
-  - name: FoolGoldDrop
-    clip: {fileID: 8300000, guid: 5fdb13d3756c84fecac96f5a2d124370, type: 3}
-    volume: 0.3
-    pitch: 1
-    spatialBlend: 0
-    loop: 0
-    playOnAwake: 0
-    source: {fileID: 0}
 --- !u!1 &1277494494
 GameObject:
   m_ObjectHideFlags: 0
@@ -93732,7 +93673,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!210 &1371976716
 SortingGroup:
@@ -93923,7 +93864,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1512349111
 GameObject:
@@ -96127,7 +96068,7 @@ Transform:
   - {fileID: 1047456809}
   - {fileID: 1685810825}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1735456263
 GameObject:
@@ -96734,7 +96675,7 @@ RectTransform:
   - {fileID: 523585963}
   - {fileID: 680651414}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -96756,6 +96697,7 @@ MonoBehaviour:
   pauseCursor: {fileID: 2800000, guid: 951f5b53cf5f10f449a7e8317b8752cf, type: 3}
   searchingCursor: {fileID: 2800000, guid: 34b389ce8297f1a41b3d1d76cd8947a3, type: 3}
   pauseMenuUI: {fileID: 523585962}
+  audioManager: {fileID: 0}
 --- !u!114 &1907013830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96771,7 +96713,7 @@ MonoBehaviour:
   realGoldBox: {fileID: 1387011749}
   foolsGoldBox: {fileID: 60262693}
   miningSlider: {fileID: 399217952}
-  audioManager: {fileID: 1255988646}
+  audioManager: {fileID: 0}
   scoreText: {fileID: 760063659}
 --- !u!1 &1943906401
 GameObject:
@@ -102545,7 +102487,7 @@ PrefabInstance:
       objectReference: {fileID: 996869460}
     - target: {fileID: 308118037977808360, guid: a876c345902131840b66ec710ac2f500, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 308118037977808360, guid: a876c345902131840b66ec710ac2f500, type: 3}
       propertyPath: m_LocalPosition.x

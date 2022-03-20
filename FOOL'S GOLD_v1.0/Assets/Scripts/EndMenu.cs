@@ -11,6 +11,7 @@ public class EndMenu : MonoBehaviour
 
     [SerializeField] ParticleSystem pickaxe;
     [SerializeField] ParticleSystem torch;
+    //[SerializeField] AudioManager audioManager;
 
     [SerializeField] TextMeshProUGUI endScore;
     [SerializeField] TextMeshProUGUI scoreText;
@@ -27,6 +28,11 @@ public class EndMenu : MonoBehaviour
         PlayerPrefs.DeleteKey("highScore");
     }
 
+    public void clickAudio()
+    {
+        FindObjectOfType<AudioManager>().PlaySound("MenuClick");
+    }
+
     void Update()
     {
         if (endMenu.activeInHierarchy == true)
@@ -39,5 +45,10 @@ public class EndMenu : MonoBehaviour
 
         endScore.text = scoreText.text;
         endHighScoreText.text = LootScoreManager.highScore.ToString();
+
+        if (endMenu.activeInHierarchy && Input.GetMouseButtonDown(0))
+        {
+            clickAudio();
+        }
     }
 }

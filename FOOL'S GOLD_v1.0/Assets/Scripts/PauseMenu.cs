@@ -10,10 +10,16 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] Texture2D pauseCursor;
     [SerializeField] Texture2D searchingCursor;
     [SerializeField] GameObject pauseMenuUI;
+    [SerializeField] AudioManager audioManager;
 
     void Update()
     {
         EscKey();
+
+        if (pauseMenuUI.activeInHierarchy && Input.GetMouseButtonDown(0))
+        {
+            clickAudio();
+        }
     }
 
     public void EscKey()
@@ -29,6 +35,11 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
+    }
+
+    public void clickAudio()
+    {
+        FindObjectOfType<AudioManager>().PlaySound("MenuClick");
     }
 
     public void Resume()
