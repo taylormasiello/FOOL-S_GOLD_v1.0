@@ -20,10 +20,10 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void clickAudio()
-    {
-        FindObjectOfType<AudioManager>().PlaySound("MenuClick");
-    }
+    //public void clickAudio()
+    //{
+    //    FindObjectOfType<AudioManager>().PlaySound("MenuClick");
+    //}
 
     void Start()
     {
@@ -33,9 +33,9 @@ public class MainMenu : MonoBehaviour
 
     void Update()
     {
-        if (mainMenuUI.activeInHierarchy && Input.GetMouseButtonDown(0))
-        {
-            clickAudio();
-        }
+        //if (mainMenuUI.activeInHierarchy && Input.GetMouseButtonDown(0))
+        //{
+        //    clickAudio();
+        //}
     }
 }

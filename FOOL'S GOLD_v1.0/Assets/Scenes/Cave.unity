@@ -2088,6 +2088,7 @@ GameObject:
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
+  - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2244,6 +2245,18 @@ MonoBehaviour:
   maskPipelineAsset: {fileID: 11400000, guid: 8f6429fd390c23d45a4f8c5cdddd4f51, type: 2}
   noMaskPipelineAsset: {fileID: 11400000, guid: 7731801e69af0ca44a4e38b2ec35a897, type: 2}
   gameCursorScript: {fileID: 996869460}
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d6c010a30a93443bf12871228a2e54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &523585962
 GameObject:
   m_ObjectHideFlags: 0
@@ -2638,7 +2651,6 @@ MonoBehaviour:
   endMenuCursor: {fileID: 2800000, guid: 23a123305ebba704f8bc4f0247b37ec1, type: 3}
   pickaxe: {fileID: 1277494497}
   torch: {fileID: 2104499962}
-  audioManager: {fileID: 0}
   endScore: {fileID: 1183893917}
   scoreText: {fileID: 760063659}
   endHighScoreText: {fileID: 2115955317}
@@ -67039,6 +67051,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 519420035}
+        m_TargetAssemblyTypeName: MenuBtnAudio, Assembly-CSharp
+        m_MethodName: PlayMenuBtnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &782368108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67163,6 +67187,18 @@ MonoBehaviour:
       - m_Target: {fileID: 680651415}
         m_TargetAssemblyTypeName: EndMenu, Assembly-CSharp
         m_MethodName: TitleMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 519420035}
+        m_TargetAssemblyTypeName: MenuBtnAudio, Assembly-CSharp
+        m_MethodName: PlayMenuBtnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -94304,6 +94340,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 519420035}
+        m_TargetAssemblyTypeName: MenuBtnAudio, Assembly-CSharp
+        m_MethodName: PlayMenuBtnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1607031787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96697,7 +96745,6 @@ MonoBehaviour:
   pauseCursor: {fileID: 2800000, guid: 951f5b53cf5f10f449a7e8317b8752cf, type: 3}
   searchingCursor: {fileID: 2800000, guid: 34b389ce8297f1a41b3d1d76cd8947a3, type: 3}
   pauseMenuUI: {fileID: 523585962}
-  audioManager: {fileID: 0}
 --- !u!114 &1907013830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96713,7 +96760,6 @@ MonoBehaviour:
   realGoldBox: {fileID: 1387011749}
   foolsGoldBox: {fileID: 60262693}
   miningSlider: {fileID: 399217952}
-  audioManager: {fileID: 0}
   scoreText: {fileID: 760063659}
 --- !u!1 &1943906401
 GameObject:
@@ -96801,6 +96847,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1907013829}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: LoadMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 519420035}
+        m_TargetAssemblyTypeName: MenuBtnAudio, Assembly-CSharp
+        m_MethodName: PlayMenuBtnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

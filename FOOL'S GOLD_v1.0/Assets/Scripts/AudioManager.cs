@@ -47,10 +47,10 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
     }
 
-    public void menuClickSound()
-    {
-        PlaySound("MenuClick");
-    }
+    //public void PlayMenuBtnClick()
+    //{
+    //    PlaySound("MenuClick");
+    //}
 
     void Start()
     {

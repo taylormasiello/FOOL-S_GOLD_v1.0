@@ -46,7 +46,7 @@ MonoBehaviour:
   sounds:
   - name: RealGoldDrop
     clip: {fileID: 8300000, guid: 7a87aa526dcc1de49b2d9866cb3dd78c, type: 3}
-    volume: 0.3
+    volume: 0.85
     pitch: 1
     spatialBlend: 0
     loop: 0
@@ -54,7 +54,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: FoolGoldDrop
     clip: {fileID: 8300000, guid: 5fdb13d3756c84fecac96f5a2d124370, type: 3}
-    volume: 0.3
+    volume: 0.85
     pitch: 1
     spatialBlend: 0
     loop: 0
@@ -70,7 +70,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Theme
     clip: {fileID: 8300000, guid: c30fb566db8d61c47b24b39f932ba848, type: 3}
-    volume: 0.5
+    volume: 0.6
     pitch: 1
     spatialBlend: 0
     loop: 1

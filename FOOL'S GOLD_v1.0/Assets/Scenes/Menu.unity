@@ -230,9 +230,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2035706189}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: menuClickSound
+      - m_Target: {fileID: 1074116023}
+        m_TargetAssemblyTypeName: MenuBtnAudio, Assembly-CSharp
+        m_MethodName: PlayMenuBtnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -934,7 +934,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 354062917}
-  - component: {fileID: 354062918}
   m_Layer: 5
   m_Name: HowToPlay
   m_TagString: Untagged
@@ -964,21 +963,6 @@ RectTransform:
   m_AnchoredPosition: {x: 22.0776, y: 22.2008}
   m_SizeDelta: {x: 2225.1863, y: 1286.1602}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &354062918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 354062916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 359f45b45af258740bc80511bbb4a37c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioManager: {fileID: 2035706189}
-  howToMenu: {fileID: 354062916}
-  backBtn: {fileID: 0}
 --- !u!1 &372920380
 GameObject:
   m_ObjectHideFlags: 0
@@ -1587,6 +1571,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1074116023}
+        m_TargetAssemblyTypeName: MenuBtnAudio, Assembly-CSharp
+        m_MethodName: PlayMenuBtnClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2463,6 +2459,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1074116023}
+        m_TargetAssemblyTypeName: MenuBtnAudio, Assembly-CSharp
+        m_MethodName: PlayMenuBtnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1061443685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2513,6 +2521,7 @@ GameObject:
   - component: {fileID: 1074116020}
   - component: {fileID: 1074116019}
   - component: {fileID: 1074116022}
+  - component: {fileID: 1074116023}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2618,6 +2627,18 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &1074116023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074116018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d6c010a30a93443bf12871228a2e54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1167298471
 GameObject:
   m_ObjectHideFlags: 0
@@ -3477,6 +3498,18 @@ MonoBehaviour:
       - m_Target: {fileID: 98241704}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1074116023}
+        m_TargetAssemblyTypeName: MenuBtnAudio, Assembly-CSharp
+        m_MethodName: PlayMenuBtnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

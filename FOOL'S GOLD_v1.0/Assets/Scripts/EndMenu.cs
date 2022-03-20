@@ -28,10 +28,10 @@ public class EndMenu : MonoBehaviour
         PlayerPrefs.DeleteKey("highScore");
     }
 
-    public void clickAudio()
-    {
-        FindObjectOfType<AudioManager>().PlaySound("MenuClick");
-    }
+    //public void clickAudio()
+    //{
+    //    FindObjectOfType<AudioManager>().PlaySound("MenuClick");
+    //}
 
     void Update()
     {
@@ -46,9 +46,9 @@ public class EndMenu : MonoBehaviour
         endScore.text = scoreText.text;
         endHighScoreText.text = LootScoreManager.highScore.ToString();
 
-        if (endMenu.activeInHierarchy && Input.GetMouseButtonDown(0))
-        {
-            clickAudio();
-        }
+        //if (endMenu.activeInHierarchy && Input.GetMouseButtonDown(0))
+        //{
+        //    clickAudio();
+        //}
     }
 }
