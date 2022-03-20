@@ -25,4 +25,12 @@ public class MainMenu : MonoBehaviour
         Time.timeScale = 0;
         Cursor.SetCursor(menuCursor, Vector2.zero, CursorMode.Auto);
     }
+
+    void Update()
+    {
+        if (mainMenuUI.activeInHierarchy == true)
+        {
+            Cursor.SetCursor(menuCursor, Vector2.zero, CursorMode.Auto);
+        }
+    }
 }

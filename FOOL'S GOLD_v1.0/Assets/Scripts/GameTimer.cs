@@ -11,6 +11,7 @@ public class GameTimer : MonoBehaviour
     public float timeLeft;
     public bool gameOver;
     Image gameTimer;
+    AudioSource theme;
 
     void Awake()
     {
@@ -30,12 +31,14 @@ public class GameTimer : MonoBehaviour
         if (timeLeft < 3 && timeLeft > 2.99)
         {
             FindObjectOfType<AudioManager>().PlaySound("TimeTicking");
-        } else if (timeLeft <= 0.1)
+
+        }
+        else if (timeLeft <= 0.1)
         {
             FindObjectOfType<AudioManager>().StopSound("TimeTicking");
             FindObjectOfType<AudioManager>().StopSound("MiningAction");
-        } 
-        
+        }
+
         //EndLevelSFX
         if (timeLeft <= 0.1 && timeLeft >= 0.09)
         {
