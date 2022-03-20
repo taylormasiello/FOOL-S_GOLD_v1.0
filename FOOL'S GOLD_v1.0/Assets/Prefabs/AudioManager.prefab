@@ -70,7 +70,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Theme
     clip: {fileID: 8300000, guid: c30fb566db8d61c47b24b39f932ba848, type: 3}
-    volume: 0.4
+    volume: 0.35
     pitch: 1
     spatialBlend: 0
     loop: 1
@@ -86,7 +86,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: TimeTicking
     clip: {fileID: 8300000, guid: c5e2a73ad4706440f93bf05df0b465fe, type: 3}
-    volume: 0.7
+    volume: 1
     pitch: 0.509
     spatialBlend: 0
     loop: 1
@@ -118,8 +118,8 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: WallBump
     clip: {fileID: 8300000, guid: 1a0c375b89064544a80acbf6be82a06e, type: 3}
-    volume: 0.35
-    pitch: 2
+    volume: 0.3
+    pitch: 3
     spatialBlend: 0
     loop: 0
     playOnAwake: 0

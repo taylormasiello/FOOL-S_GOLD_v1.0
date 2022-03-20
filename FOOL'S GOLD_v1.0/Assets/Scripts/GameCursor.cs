@@ -16,13 +16,16 @@ public class GameCursor : MonoBehaviour
     public bool isPickaxe;
     public bool isTorch;
 
+    void Awake()
+    {
+        SetSearchingCursor(searchingCursorTexture, torch);
+    }
 
     void Start()
     {
         isPickaxe = false;
         isTorch = true;
         InvokeRepeating("ToggleEffects", 0.1f, 0.1f);
-        SetSearchingCursor(searchingCursorTexture, torch);
         backpackBtn.onClick.AddListener(TogglePickaxe);
     }
 

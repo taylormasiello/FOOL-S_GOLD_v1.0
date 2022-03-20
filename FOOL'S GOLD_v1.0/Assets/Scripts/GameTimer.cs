@@ -28,7 +28,7 @@ public class GameTimer : MonoBehaviour
         RunningTimer();
 
         //TimerSFX
-        if (timeLeft < 3 && timeLeft > 2.99)
+        if (timeLeft < 10 && timeLeft > 9.99)
         {
             FindObjectOfType<AudioManager>().PlaySound("TimeTicking");
 
