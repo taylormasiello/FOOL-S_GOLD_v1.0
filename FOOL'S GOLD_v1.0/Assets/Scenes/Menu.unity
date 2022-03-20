@@ -2922,8 +2922,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "CONTROLS:\n\nMove: WASD/Arrow Keys\n\nMine: Mouse Click On \"Gold\"\n\nEquip/Unequip
-    (Toggle) Torch/Pickaxe: \nMouse Click on Kenny's Backpack\n\nPause: Tab Key\n\nClose
-    Application: \\ Key"
+    (Toggle) Torch/Pickaxe: \nMouse Click on Kenny's Backpack\n\nPause: Tab Key\n\nQuit
+    Program: Backslash Key"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9557b8e0c1dad5042b52f7a4248f231c, type: 2}
   m_sharedMaterial: {fileID: -2466246401537646002, guid: 9557b8e0c1dad5042b52f7a4248f231c, type: 2}

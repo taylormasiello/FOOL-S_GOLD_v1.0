@@ -23,7 +23,6 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         Time.timeScale = 0;
-        Cursor.SetCursor(menuCursor, Vector2.zero, CursorMode.Auto);
     }
 
     void Update()

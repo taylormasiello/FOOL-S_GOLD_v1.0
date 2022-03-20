@@ -46,7 +46,7 @@ MonoBehaviour:
   sounds:
   - name: RealGoldDrop
     clip: {fileID: 8300000, guid: 7a87aa526dcc1de49b2d9866cb3dd78c, type: 3}
-    volume: 0.85
+    volume: 0.65
     pitch: 1
     spatialBlend: 0
     loop: 0
@@ -54,7 +54,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: FoolGoldDrop
     clip: {fileID: 8300000, guid: 5fdb13d3756c84fecac96f5a2d124370, type: 3}
-    volume: 0.85
+    volume: 0.65
     pitch: 1
     spatialBlend: 0
     loop: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: MenuClick
     clip: {fileID: 8300000, guid: 52320e590bf774734a288886eba557ba, type: 3}
-    volume: 0.3
+    volume: 0.25
     pitch: 1
     spatialBlend: 0
     loop: 0
@@ -70,7 +70,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Theme
     clip: {fileID: 8300000, guid: c30fb566db8d61c47b24b39f932ba848, type: 3}
-    volume: 0.625
+    volume: 0.4
     pitch: 1
     spatialBlend: 0
     loop: 1
@@ -78,7 +78,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: EndLevel
     clip: {fileID: 8300000, guid: f05206903c6c9f9468fd064aa38a7e8b, type: 3}
-    volume: 0.65
+    volume: 0.35
     pitch: 1
     spatialBlend: 0
     loop: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: TimeTicking
     clip: {fileID: 8300000, guid: c5e2a73ad4706440f93bf05df0b465fe, type: 3}
-    volume: 0.5
+    volume: 0.7
     pitch: 0.509
     spatialBlend: 0
     loop: 1
@@ -94,9 +94,25 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: MiningAction
     clip: {fileID: 8300000, guid: 6347b13274aec8447acba33e71797cc2, type: 3}
-    volume: 0.75
+    volume: 0.6
     pitch: 2.8
     spatialBlend: 0
     loop: 1
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: PickaxeEquip
+    clip: {fileID: 8300000, guid: 6ba53cdd4b6df41789f95e65da62da69, type: 3}
+    volume: 1
+    pitch: 0.75
+    spatialBlend: 0
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: TorchEquip
+    clip: {fileID: 8300000, guid: a5f3d872501934b32a3f2c6515f74b73, type: 3}
+    volume: 0.375
+    pitch: 2
+    spatialBlend: 0
+    loop: 0
     playOnAwake: 0
     source: {fileID: 0}

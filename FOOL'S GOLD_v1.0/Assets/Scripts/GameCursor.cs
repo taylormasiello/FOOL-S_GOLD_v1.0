@@ -12,14 +12,13 @@ public class GameCursor : MonoBehaviour
 
     [SerializeField] ParticleSystem pickaxe;
     [SerializeField] ParticleSystem torch;
-
+    
     public bool isPickaxe;
     public bool isTorch;
 
 
     void Start()
     {
-        
         isPickaxe = false;
         isTorch = true;
         InvokeRepeating("ToggleEffects", 0.1f, 0.1f);
@@ -31,13 +30,24 @@ public class GameCursor : MonoBehaviour
     {
         Cursor.SetCursor(searchingCursorTexture, Vector2.zero, CursorMode.Auto);
         isTorch = true;
+
+        if (searchingCursorTexture)
+        {
+            FindObjectOfType<AudioManager>().StopSound("PickaxeEquip");
+            FindObjectOfType<AudioManager>().PlaySound("TorchEquip");
+        }        
     }
 
     public void SetMiningCursor(Texture2D texture, ParticleSystem partSys)
     {
-
         Cursor.SetCursor(miningCursorTexture, Vector2.zero, CursorMode.Auto);
         isTorch = false;
+
+        if (miningCursorTexture)
+        {
+            FindObjectOfType<AudioManager>().StopSound("TorchEquip");
+            FindObjectOfType<AudioManager>().PlaySound("PickaxeEquip");
+        }          
     }
 
     public void TogglePickaxe()
