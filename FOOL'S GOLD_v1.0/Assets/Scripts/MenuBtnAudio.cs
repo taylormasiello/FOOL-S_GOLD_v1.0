@@ -14,7 +14,6 @@ public class MenuBtnAudio : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
-            Debug.Log("QUIT");
         }
     }
 
