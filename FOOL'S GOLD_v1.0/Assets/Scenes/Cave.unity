@@ -1591,7 +1591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endMenu: {fileID: 680651413}
-  timeStart: 210
+  timeStart: 30
   timeLeft: 0
   gameOver: 0
 --- !u!1 &463453143
@@ -2164,7 +2164,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.5
+  orthographic size: 14
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2188,7 +2188,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.010416269, y: 0.041667223, z: -10}
+  m_LocalPosition: {x: 0.019443512, y: 0.077778816, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 996869459}
@@ -3086,18 +3086,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1980029694, guid: a876c345902131840b66ec710ac2f500, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980029694, guid: a876c345902131840b66ec710ac2f500, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980029694, guid: a876c345902131840b66ec710ac2f500, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 308118037912268440, guid: a876c345902131840b66ec710ac2f500, type: 3}
       propertyPath: black
       value: 
@@ -67408,8 +67396,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 14.142212, y: -1.3756981}
-  m_SizeDelta: {x: 72.0117, y: 19.2603}
+  m_AnchoredPosition: {x: 14.0105, y: 3.5785}
+  m_SizeDelta: {x: 84.6952, y: 34.0687}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879516964
 MonoBehaviour:
@@ -88828,7 +88816,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277494494}
   m_LocalRotation: {x: -0.1330223, y: 0.6330222, z: 0.111618936, w: 0.7544066}
-  m_LocalPosition: {x: -0.4, y: 0.1, z: 0}
+  m_LocalPosition: {x: -0.55, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1686522141}
@@ -94332,7 +94320,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 196.00006, y: 18.999939}
+  m_AnchoredPosition: {x: 196.00006, y: 30}
   m_SizeDelta: {x: 87.9311, y: 75.2932}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1564732422
@@ -94988,7 +94976,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -4, y: -25, z: 0}
+  - first: {x: -4, y: -24, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 3
@@ -95838,21 +95826,21 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -51, y: 24, z: 0}
+  - first: {x: -10, y: 23, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -10, y: 24, z: 0}
+  - first: {x: -51, y: 24, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
