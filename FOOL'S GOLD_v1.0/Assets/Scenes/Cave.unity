@@ -567,11 +567,11 @@ MonoBehaviour:
   m_Instructions:
   - m_FullHash: -397766897
     m_VirtualCamera: {fileID: 2017871524}
-    m_ActivateAfter: 0.15
+    m_ActivateAfter: 0.1
     m_MinDuration: 0
   - m_FullHash: -409901381
     m_VirtualCamera: {fileID: 184471736}
-    m_ActivateAfter: 0.15
+    m_ActivateAfter: 0.1
     m_MinDuration: 0
   m_DefaultBlend:
     m_Style: 1
@@ -652,7 +652,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 14
+    OrthographicSize: 13.75
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -676,7 +676,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184471735}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.3089164, y: 5.4846053, z: -7.7346845}
+  m_LocalPosition: {x: 1.3085686, y: 5.483217, z: -7.7346845}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2144083966}
@@ -102550,8 +102550,8 @@ MonoBehaviour:
   m_ScreenX: 0.4996094
   m_ScreenY: 0.5027778
   m_CameraDistance: 10
-  m_DeadZoneWidth: 0.175
-  m_DeadZoneHeight: 0.1
+  m_DeadZoneWidth: 0.15
+  m_DeadZoneHeight: 0.08
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 1.99
