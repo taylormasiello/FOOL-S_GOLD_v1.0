@@ -11,6 +11,7 @@ public class LootScoreManager : MonoBehaviour
     [SerializeField] GameObject miningInfoBox;
     [SerializeField] GameObject endScreen;
 
+    [SerializeField] Texture2D miningCursorTexture;
     [SerializeField] Slider miningSlider;
     [SerializeField] TextMeshProUGUI scoreText;
 
@@ -83,7 +84,7 @@ public class LootScoreManager : MonoBehaviour
             if (timeShown <= 0.01f)
             {
                 realGoldBox.SetActive(false);
-
+                Cursor.SetCursor(miningCursorTexture, Vector2.zero, CursorMode.Auto);
             }
             else if (timeShown <= 0.65f)
             {
@@ -98,6 +99,7 @@ public class LootScoreManager : MonoBehaviour
             if (timeShown <= 0.01f)
             {
                 foolsGoldBox.SetActive(false);
+                Cursor.SetCursor(miningCursorTexture, Vector2.zero, CursorMode.Auto);
             }
             else if (timeShown <= 0.65f)
             {

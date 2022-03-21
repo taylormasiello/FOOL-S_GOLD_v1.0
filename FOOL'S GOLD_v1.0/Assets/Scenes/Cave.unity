@@ -96877,6 +96877,7 @@ MonoBehaviour:
   foolsGoldBox: {fileID: 60262693}
   miningInfoBox: {fileID: 1782252007}
   endScreen: {fileID: 680651413}
+  miningCursorTexture: {fileID: 2800000, guid: aba223becead1a441bcfa3786bc6e908, type: 3}
   miningSlider: {fileID: 399217952}
   scoreText: {fileID: 760063659}
 --- !u!1 &1943906401
