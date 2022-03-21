@@ -2,12 +2,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
-{
-    public static bool GameIsPaused = false;
-
-    [SerializeField] Texture2D pauseCursor;
-    [SerializeField] Texture2D searchingCursor;
+{    
     [SerializeField] GameObject pauseMenuUI;
+    public static bool GameIsPaused = false;
 
     void Update()
     {

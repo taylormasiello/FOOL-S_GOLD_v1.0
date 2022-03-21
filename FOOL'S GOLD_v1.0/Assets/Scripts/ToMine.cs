@@ -27,7 +27,6 @@ public class ToMine : MonoBehaviour
     void Start()
     {
         pickaxeFov.SetActive(false);
-        Cursor.visible = true;
         InvokeRepeating("ProgressChange", 0.1f, 0.1f);
         miningProgress.value = 0;
     }
@@ -49,14 +48,8 @@ public class ToMine : MonoBehaviour
     {
         ClickOnRock();
 
-        if (!miningInfoBox.activeInHierarchy)
+        if (miningInfoBox.activeInHierarchy)
         {
-            Cursor.visible = true;
-        }
-        else if (miningInfoBox.activeInHierarchy)
-        {
-            Cursor.visible = false;
-
             pickaxe.Stop();
             pickaxe.Clear();
             torch.Stop();
