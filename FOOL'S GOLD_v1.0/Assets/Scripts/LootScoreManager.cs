@@ -1,5 +1,3 @@
-//using System.Collections;
-//using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -68,7 +66,6 @@ public class LootScoreManager : MonoBehaviour
 
     void timeBoxShown()
     {  
-        //MiningActionSFX
         if (miningInfoBox.activeInHierarchy && !realGoldBox.activeInHierarchy && !foolsGoldBox.activeInHierarchy)
         {
             FindObjectOfType<AudioManager>().PlaySound("MiningAction");

@@ -1,5 +1,3 @@
-//using System.Collections;
-//using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
@@ -15,6 +13,11 @@ public class EndMenu : MonoBehaviour
     [SerializeField] TextMeshProUGUI endScore;
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI endHighScoreText;
+
+    void Awake()
+    {
+        Cursor.SetCursor(endMenuCursor, Vector2.zero, CursorMode.Auto);
+    }
 
     public void TitleMenu()
     {

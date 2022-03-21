@@ -70,7 +70,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Theme
     clip: {fileID: 8300000, guid: c30fb566db8d61c47b24b39f932ba848, type: 3}
-    volume: 0.275
+    volume: 0.325
     pitch: 1
     spatialBlend: 0
     loop: 1
@@ -94,7 +94,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: MiningAction
     clip: {fileID: 8300000, guid: 6347b13274aec8447acba33e71797cc2, type: 3}
-    volume: 0.45
+    volume: 0.4
     pitch: 2.8
     spatialBlend: 0
     loop: 1

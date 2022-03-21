@@ -1,5 +1,3 @@
-//using System.Collections;
-//using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +6,11 @@ public class MainMenu : MonoBehaviour
     [SerializeField] Texture2D menuCursor;
     [SerializeField] AudioManager audioManager;
     [SerializeField] GameObject mainMenuUI;
+
+    void Awake()
+    {
+        Cursor.SetCursor(menuCursor, Vector2.zero, CursorMode.Auto);
+    }
 
     public void PlayGame()
     {

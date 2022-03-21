@@ -1,5 +1,3 @@
-//using System.Collections;
-//using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -40,7 +38,7 @@ public class GameTimer : MonoBehaviour
         }
 
         //EndLevelSFX
-        if (timeLeft <= 0.1 && timeLeft >= 0.09)
+        if (timeLeft <= 0.1 && timeLeft >= 0.08)
         {
             FindObjectOfType<AudioManager>().PlaySound("EndLevel");
         }
