@@ -1,6 +1,6 @@
 # FOOL'S GOLD version 1.0 (FG_v1.0)
 
-## Check out the finalized and released, playable in-browswer or available to download, demo here: https://taayakin.itch.io/fools-gold-demo
+## Check out the finalized and released demo, playable in-browswer or available to download here: https://taayakin.itch.io/fools-gold-demo
 ## Any proceeds from this project will be donated to K9s for Warriors: https://k9sforwarriors.org/
 
 ### Game created and built in 8 days
