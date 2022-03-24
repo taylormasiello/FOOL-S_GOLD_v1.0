@@ -1,6 +1,9 @@
 # FOOL'S GOLD version 1.0 (FG_v1.0)
 
-## Game created and built in 8 days
+## Check out the finalized and released, playable in-browswer or available to download, demo here: https://taayakin.itch.io/fools-gold-demo
+## Any proceeds from this project will be donated to K9s for Warriors: https://k9sforwarriors.org/
+
+### Game created and built in 8 days
 
 Game originally made for Brackeys Game Jam 2022.1, but unfortunately the game file metadata became corrupted 2 days before the end of the jam. 
 
